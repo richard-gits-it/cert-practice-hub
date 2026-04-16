@@ -1,7 +1,5 @@
 # Cert Practice Hub
 
-A free, no-login IT certification exam prep app covering CCNA, Network+, Security+, A+, and more.
-
 **Live:** [cert-practice-hub.vercel.app](https://cert-practice-hub.vercel.app)
 
 ## Features
