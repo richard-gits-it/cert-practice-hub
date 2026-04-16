@@ -48,8 +48,8 @@ export default function CertHubView({ cert }: { cert: Cert }) {
         <ModeLink
           href={`/${cert.slug}/flashcards`}
           icon="▦"
-          label="FLASHCARDS"
-          desc={`${cert.domains.length} domains — flip-card drill`}
+          label="LEARN MODE"
+          desc={`Adaptive MC • ${cert.domains.length} domains`}
           color={cert.color}
         />
         <ModeLink
