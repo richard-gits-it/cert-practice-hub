@@ -12,7 +12,7 @@ const ccnaQuestions: Question[] = [
     prompt: "At which OSI layer does a switch primarily operate?",
     options: ["Layer 1 (Physical)", "Layer 2 (Data Link)", "Layer 3 (Network)", "Layer 4 (Transport)"],
     correct_answer: "Layer 2 (Data Link)",
-    explanation: "Switches forward frames based on MAC addresses, which is a Layer 2 function. Multilayer switches can also perform Layer 3 routing.",
+explanation: "Switches forward frames based on MAC (Media Access Control) addresses, which is a Layer 2 function. Multilayer switches can also perform Layer 3 routing.",
   },
   {
     id: "ccna-nf-002",
@@ -22,7 +22,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which protocol resolves an IPv4 address to a MAC address?",
     options: ["DNS", "ARP", "DHCP", "ICMP"],
     correct_answer: "ARP",
-    explanation: "ARP (Address Resolution Protocol) maps known IPv4 addresses to MAC addresses on a local network segment.",
+explanation: "ARP (Address Resolution Protocol) maps known IPv4 addresses to MAC (Media Access Control) addresses on a local network segment.",
   },
   {
     id: "ccna-nf-003",
@@ -32,7 +32,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the subnet mask for a /20 network in dotted decimal?",
     options: ["255.255.240.0", "255.255.248.0", "255.255.224.0", "255.255.252.0"],
     correct_answer: "255.255.240.0",
-    explanation: "/20 has 4 borrowed bits in the third octet: 11110000 = 240. So the mask is 255.255.240.0.",
+explanation: "/20 has 4 borrowed bits in the third octet: 11110000 = 240. So the mask is 255.255.240.0.",
   },
   {
     id: "ccna-nf-004",
@@ -42,7 +42,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which OSI layer handles end-to-end delivery and flow control?",
     options: ["Network", "Transport", "Session", "Data Link"],
     correct_answer: "Transport",
-    explanation: "Layer 4 (Transport) handles end-to-end communication, flow control, segmentation, and error recovery. TCP and UDP operate here.",
+explanation: "Layer 4 (Transport) handles end-to-end communication, flow control, segmentation, and error recovery. TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) operate here.",
   },
   {
     id: "ccna-nf-005",
@@ -52,7 +52,7 @@ const ccnaQuestions: Question[] = [
     prompt: "How many usable host addresses are in a /26 network?",
     options: ["30", "62", "126", "254"],
     correct_answer: "62",
-    explanation: "/26 leaves 6 host bits: 2^6 - 2 = 64 - 2 = 62 usable hosts (subtracting network and broadcast).",
+explanation: "/26 leaves 6 host bits: 2^6 - 2 = 64 - 2 = 62 usable hosts (subtracting network and broadcast).",
   },
   {
     id: "ccna-nf-006",
@@ -62,7 +62,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which IP address is a private (RFC 1918) address?",
     options: ["172.15.0.1", "172.16.0.1", "192.167.1.1", "11.0.0.1"],
     correct_answer: "172.16.0.1",
-    explanation: "RFC 1918 private ranges: 10.0.0.0/8, 172.16.0.0/12 (172.16-172.31), and 192.168.0.0/16. 172.16.0.1 falls in the second range.",
+explanation: "RFC 1918 private ranges: 10.0.0.0/8, 172.16.0.0/12 (172.16-172.31), and 192.168.0.0/16. 172.16.0.1 falls in the second range.",
   },
   {
     id: "ccna-nf-007",
@@ -77,7 +77,7 @@ const ccnaQuestions: Question[] = [
       "To provide wireless access",
     ],
     correct_answer: "To logically segment a network at Layer 2",
-    explanation: "VLANs split a physical switch into multiple broadcast domains, improving security and reducing broadcast traffic without needing separate switches.",
+explanation: "VLANs split a physical switch into multiple broadcast domains, improving security and reducing broadcast traffic without needing separate switches.",
   },
   {
     id: "ccna-nf-008",
@@ -87,7 +87,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which cable type is required for connecting two switches directly without auto-MDIX?",
     options: ["Straight-through", "Crossover", "Rollover", "Console"],
     correct_answer: "Crossover",
-    explanation: "A crossover cable is traditionally needed for like-device connections (switch-switch, router-router). Modern devices with auto-MDIX negotiate this automatically.",
+explanation: "A crossover cable is traditionally needed for like-device connections (switch-switch, router-router). Modern devices with auto-MDIX negotiate this automatically.",
   },
   {
     id: "ccna-nf-009",
@@ -97,7 +97,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the default MTU size on Ethernet?",
     options: ["1000 bytes", "1500 bytes", "9000 bytes", "2048 bytes"],
     correct_answer: "1500 bytes",
-    explanation: "Standard Ethernet MTU is 1500 bytes. Jumbo frames can be up to 9000 bytes but must be explicitly configured.",
+explanation: "Standard Ethernet MTU (Maximum Transmission Unit) is 1500 bytes. Jumbo frames can be up to 9000 bytes but must be explicitly configured.",
   },
   {
     id: "ccna-nf-010",
@@ -107,7 +107,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which address type is 169.254.10.5?",
     options: ["Public unicast", "APIPA (link-local)", "Multicast", "Loopback"],
     correct_answer: "APIPA (link-local)",
-    explanation: "169.254.0.0/16 is the APIPA range assigned automatically when a DHCP client cannot reach a DHCP server.",
+explanation: "169.254.0.0/16 is the APIPA (Automatic Private IP Addressing) range assigned automatically when a DHCP (Dynamic Host Configuration Protocol) client cannot reach a DHCP server.",
   },
   {
     id: "ccna-nf-011",
@@ -117,7 +117,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which device operates at Layer 1 of the OSI model?",
     options: ["Router", "Switch", "Hub", "Firewall"],
     correct_answer: "Hub",
-    explanation: "A hub is a Layer 1 device that simply repeats electrical signals to all ports. Switches are Layer 2, routers are Layer 3.",
+explanation: "A hub is a Layer 1 device that simply repeats electrical signals to all ports. Switches are Layer 2, routers are Layer 3.",
   },
   {
     id: "ccna-nf-012",
@@ -127,7 +127,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the network address for 192.168.10.50/27?",
     options: ["192.168.10.0", "192.168.10.32", "192.168.10.48", "192.168.10.64"],
     correct_answer: "192.168.10.32",
-    explanation: "/27 creates blocks of 32 (256-224). Subnets: .0, .32, .64, .96... 50 falls in the .32 subnet.",
+explanation: "/27 creates blocks of 32 (256-224). Subnets: .0, .32, .64, .96... 50 falls in the .32 subnet.",
   },
   {
     id: "ccna-nf-013",
@@ -137,7 +137,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which IPv6 address type is equivalent to an IPv4 APIPA address?",
     options: ["Global unicast (2000::/3)", "Link-local (fe80::/10)", "Unique local (fc00::/7)", "Multicast (ff00::/8)"],
     correct_answer: "Link-local (fe80::/10)",
-    explanation: "Link-local addresses (fe80::/10) are automatically assigned to IPv6 interfaces and are only valid on the local link.",
+explanation: "Link-local addresses (fe80::/10) are automatically assigned to IPv6 interfaces and are only valid on the local link.",
   },
   {
     id: "ccna-nf-014",
@@ -147,7 +147,7 @@ const ccnaQuestions: Question[] = [
     prompt: "How many bits are in an IPv6 address?",
     options: ["32", "64", "96", "128"],
     correct_answer: "128",
-    explanation: "IPv6 uses 128-bit addresses, represented as eight 16-bit hexadecimal groups separated by colons.",
+explanation: "IPv6 uses 128-bit addresses, represented as eight 16-bit hexadecimal groups separated by colons.",
   },
   {
     id: "ccna-nf-015",
@@ -157,7 +157,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the broadcast address for 10.20.30.100/28?",
     options: ["10.20.30.111", "10.20.30.112", "10.20.30.127", "10.20.30.95"],
     correct_answer: "10.20.30.111",
-    explanation: "/28 creates blocks of 16. 100 falls in the 96-111 subnet (96 is network, 111 is broadcast).",
+explanation: "/28 creates blocks of 16. 100 falls in the 96-111 subnet (96 is network, 111 is broadcast).",
   },
   {
     id: "ccna-nf-016",
@@ -172,7 +172,7 @@ const ccnaQuestions: Question[] = [
       "VLANs do not affect collision domains",
     ],
     correct_answer: "A switch creates one collision domain per port",
-    explanation: "Each switch port is its own collision domain. Hubs put all ports in one collision domain. Routers create separate collision domains per interface.",
+explanation: "Each switch port is its own collision domain. Hubs put all ports in one collision domain. Routers create separate collision domains per interface.",
   },
   {
     id: "ccna-nf-017",
@@ -187,7 +187,7 @@ const ccnaQuestions: Question[] = [
       "Creating multicast groups",
     ],
     correct_answer: "Generating an IPv6 interface ID from a MAC address",
-    explanation: "EUI-64 takes a 48-bit MAC, inserts FFFE in the middle, and flips the 7th bit to create a 64-bit interface identifier for IPv6.",
+explanation: "EUI-64 (Extended Unique Identifier 64-bit) takes a 48-bit MAC (Media Access Control), inserts FFFE in the middle, and flips the 7th bit to create a 64-bit interface identifier for IPv6.",
   },
   {
     id: "ccna-nf-018",
@@ -197,7 +197,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which layer of the TCP/IP model corresponds to OSI layers 5, 6, and 7?",
     options: ["Network Access", "Internet", "Transport", "Application"],
     correct_answer: "Application",
-    explanation: "The TCP/IP Application layer combines the Session, Presentation, and Application layers of the OSI model.",
+explanation: "The TCP (Transmission Control Protocol)/IP Application layer combines the Session, Presentation, and Application layers of the OSI model.",
   },
   {
     id: "ccna-nf-019",
@@ -207,7 +207,7 @@ const ccnaQuestions: Question[] = [
     prompt: "How many /27 subnets can fit into a /24 network?",
     options: ["4", "6", "8", "16"],
     correct_answer: "8",
-    explanation: "Going from /24 to /27 borrows 3 bits: 2^3 = 8 subnets, each with 32 addresses (30 usable hosts).",
+explanation: "Going from /24 to /27 borrows 3 bits: 2^3 = 8 subnets, each with 32 addresses (30 usable hosts).",
   },
   {
     id: "ccna-nf-020",
@@ -217,7 +217,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which type of fiber is best for long-distance runs over 10 km?",
     options: ["Multimode OM1", "Multimode OM4", "Single-mode OS2", "Coaxial"],
     correct_answer: "Single-mode OS2",
-    explanation: "Single-mode fiber uses a laser source and a thin core for very long distances (40+ km). Multimode is limited to a few hundred meters typically.",
+explanation: "Single-mode fiber uses a laser source and a thin core for very long distances (40+ km). Multimode is limited to a few hundred meters typically.",
   },
   {
     id: "ccna-nf-021",
@@ -232,7 +232,7 @@ const ccnaQuestions: Question[] = [
       "Routing packets between VLANs",
     ],
     correct_answer: "Detecting and handling collisions on shared media",
-    explanation: "CSMA/CD (Carrier Sense Multiple Access with Collision Detection) was used on half-duplex Ethernet to detect collisions and manage retransmission.",
+explanation: "CSMA/CD (Carrier Sense Multiple Access with Collision Detection) was used on half-duplex Ethernet to detect collisions and manage retransmission.",
   },
   {
     id: "ccna-nf-022",
@@ -242,7 +242,7 @@ const ccnaQuestions: Question[] = [
     prompt: "In the address 2001:db8:0:0:0:0:0:1, what is the correct compressed form?",
     options: ["2001:db8::1", "2001:db8:::1", "2001::db8::1", "2001:db8:0::1"],
     correct_answer: "2001:db8::1",
-    explanation: "The double colon (::) replaces one or more consecutive groups of zeros, but can only be used once in an address.",
+explanation: "The double colon (::) replaces one or more consecutive groups of zeros, but can only be used once in an address.",
   },
   {
     id: "ccna-nf-023",
@@ -252,7 +252,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the maximum number of hosts on a /30 subnet?",
     options: ["1", "2", "4", "6"],
     correct_answer: "2",
-    explanation: "/30 has 2 host bits: 2^2 - 2 = 2 usable hosts. /30 subnets are commonly used for point-to-point WAN links.",
+explanation: "/30 has 2 host bits: 2^2 - 2 = 2 usable hosts. /30 subnets are commonly used for point-to-point WAN links.",
   },
   {
     id: "ccna-nf-024",
@@ -262,7 +262,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which of these is a valid IPv6 unicast address?",
     options: ["ff02::1", "2001:db8:abcd::1", "::", "fe80::/10"],
     correct_answer: "2001:db8:abcd::1",
-    explanation: "2001:db8::/32 is the documentation prefix and is a valid unicast format. ff02::1 is multicast, :: is the unspecified address.",
+explanation: "2001:db8::/32 is the documentation prefix and is a valid unicast format. ff02::1 is multicast, :: is the unspecified address.",
   },
   {
     id: "ccna-nf-025",
@@ -272,7 +272,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which command shows the MAC address table on a Cisco switch?",
     options: ["show arp", "show mac address-table", "show ip route", "show interfaces"],
     correct_answer: "show mac address-table",
-    explanation: "'show mac address-table' displays all learned MAC addresses and their associated ports and VLANs.",
+explanation: "'show mac address-table' displays all learned MAC (Media Access Control) addresses and their associated ports and VLANs.",
   },
   {
     id: "ccna-nf-026",
@@ -287,7 +287,7 @@ const ccnaQuestions: Question[] = [
       "By cable length",
     ],
     correct_answer: "By VLAN boundary",
-    explanation: "Each VLAN is a separate broadcast domain. Traffic broadcast within one VLAN does not reach another VLAN without a router.",
+explanation: "Each VLAN (Virtual Local Area Network) is a separate broadcast domain. Traffic broadcast within one VLAN does not reach another VLAN without a router.",
   },
   {
     id: "ccna-nf-027",
@@ -297,7 +297,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the first usable host address in 192.168.1.0/29?",
     options: ["192.168.1.0", "192.168.1.1", "192.168.1.2", "192.168.1.7"],
     correct_answer: "192.168.1.1",
-    explanation: "/29 gives 8 addresses per subnet. .0 is network, .7 is broadcast, so .1 is the first usable host.",
+explanation: "/29 gives 8 addresses per subnet. .0 is network, .7 is broadcast, so .1 is the first usable host.",
   },
   {
     id: "ccna-nf-028",
@@ -307,7 +307,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which field in an Ethernet frame identifies the upper-layer protocol?",
     options: ["Preamble", "FCS", "EtherType", "Source MAC"],
     correct_answer: "EtherType",
-    explanation: "The EtherType field indicates which protocol is encapsulated (e.g., 0x0800 = IPv4, 0x86DD = IPv6, 0x0806 = ARP).",
+explanation: "The EtherType field indicates which protocol is encapsulated (e.g., 0x0800 = IPv4, 0x86DD = IPv6, 0x0806 = ARP (Address Resolution Protocol)).",
   },
   {
     id: "ccna-nf-029",
@@ -322,7 +322,7 @@ const ccnaQuestions: Question[] = [
       "It is limited to 100 Mbps",
     ],
     correct_answer: "It doubles effective bandwidth by allowing simultaneous send and receive",
-    explanation: "Full duplex allows simultaneous transmission and reception, eliminating collisions. CSMA/CD is disabled in full-duplex mode.",
+explanation: "Full duplex allows simultaneous transmission and reception, eliminating collisions. CSMA/CD (Carrier Sense Multiple Access with Collision Detection) is disabled in full-duplex mode.",
   },
   {
     id: "ccna-nf-030",
@@ -332,7 +332,7 @@ const ccnaQuestions: Question[] = [
     prompt: "How many collision domains does a 24-port Layer 2 switch create?",
     options: ["1", "12", "24", "48"],
     correct_answer: "24",
-    explanation: "Each switch port is its own collision domain, so a 24-port switch has 24 collision domains.",
+explanation: "Each switch port is its own collision domain, so a 24-port switch has 24 collision domains.",
   },
   {
     id: "ccna-nf-031",
@@ -342,7 +342,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the difference between unicast, multicast, and broadcast?",
     options: [],
     correct_answer: "Unicast is one-to-one, multicast is one-to-many (to a specific group), broadcast is one-to-all on the local segment.",
-    explanation: "Unicast targets a single recipient. Multicast targets a group that has subscribed (e.g., routing updates). Broadcast reaches every host in the broadcast domain.",
+explanation: "Unicast targets a single recipient. Multicast targets a group that has subscribed (e.g., routing updates). Broadcast reaches every host in the broadcast domain.",
   },
   {
     id: "ccna-nf-032",
@@ -352,7 +352,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What are the three classful IPv4 address ranges and their default masks?",
     options: [],
     correct_answer: "Class A: 1-126, /8 mask. Class B: 128-191, /16 mask. Class C: 192-223, /24 mask.",
-    explanation: "127 is reserved for loopback. Classful addressing is obsolete but still appears on the exam.",
+explanation: "127 is reserved for loopback. Classful addressing is obsolete but still appears on the exam.",
   },
   {
     id: "ccna-nf-033",
@@ -362,7 +362,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which IPv6 address represents the loopback?",
     options: ["::", "::1", "fe80::1", "ff02::1"],
     correct_answer: "::1",
-    explanation: "::1 is the IPv6 loopback address, equivalent to 127.0.0.1 in IPv4. '::' is the unspecified address.",
+explanation: "::1 is the IPv6 loopback address, equivalent to 127.0.0.1 in IPv4. '::' is the unspecified address.",
   },
 
   // ═══════════════════════════════════════════════════════════════════════
@@ -376,7 +376,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What does STP (802.1D) prevent on a switched network?",
     options: ["IP conflicts", "Layer 2 loops", "VLAN hopping", "ARP spoofing"],
     correct_answer: "Layer 2 loops",
-    explanation: "Spanning Tree Protocol prevents switching loops by placing redundant ports in a blocking state to create a loop-free logical topology.",
+explanation: "Spanning Tree Protocol prevents switching loops by placing redundant ports in a blocking state to create a loop-free logical topology.",
   },
   {
     id: "ccna-na-002",
@@ -391,7 +391,7 @@ const ccnaQuestions: Question[] = [
       "16-byte security field",
     ],
     correct_answer: "4-byte tag containing TPID and TCI",
-    explanation: "802.1Q inserts a 4-byte tag with a 2-byte TPID (0x8100) and a 2-byte TCI containing priority, DEI, and the 12-bit VLAN ID.",
+explanation: "802.1Q inserts a 4-byte tag with a 2-byte TPID (0x8100) and a 2-byte TCI containing priority, DEI, and the 12-bit VLAN (Virtual Local Area Network) ID.",
   },
   {
     id: "ccna-na-003",
@@ -401,7 +401,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the maximum number of usable VLANs in 802.1Q?",
     options: ["1024", "2048", "4094", "4096"],
     correct_answer: "4094",
-    explanation: "The 12-bit VLAN ID supports 4096 values (0-4095), but VLAN 0 and 4095 are reserved, leaving 4094 usable.",
+explanation: "The 12-bit VLAN (Virtual Local Area Network) ID supports 4096 values (0-4095), but VLAN 0 and 4095 are reserved, leaving 4094 usable.",
   },
   {
     id: "ccna-na-004",
@@ -411,7 +411,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which STP port state forwards traffic and learns MAC addresses?",
     options: ["Blocking", "Listening", "Learning", "Forwarding"],
     correct_answer: "Forwarding",
-    explanation: "Only the forwarding state both transmits data and learns MAC addresses. Learning state learns MACs but does not forward.",
+explanation: "Only the forwarding state both transmits data and learns MAC (Media Access Control) addresses. Learning state learns MACs but does not forward.",
   },
   {
     id: "ccna-na-005",
@@ -426,7 +426,7 @@ const ccnaQuestions: Question[] = [
       "Reliable Spanning Tree Protocol",
     ],
     correct_answer: "Rapid Spanning Tree Protocol",
-    explanation: "RSTP (802.1w) provides faster convergence than original STP by defining new port roles and states.",
+explanation: "RSTP (Rapid Spanning Tree Protocol) (802.1w) provides faster convergence than original STP (Spanning Tree Protocol) by defining new port roles and states.",
   },
   {
     id: "ccna-na-006",
@@ -436,7 +436,7 @@ const ccnaQuestions: Question[] = [
     prompt: "On a Cisco switch running PVST+, how many STP instances run with 10 VLANs?",
     options: ["1", "5", "10", "20"],
     correct_answer: "10",
-    explanation: "Per-VLAN Spanning Tree Plus (PVST+) runs one STP instance per VLAN. With 10 VLANs, there are 10 instances.",
+explanation: "Per-VLAN (Virtual Local Area Network) Spanning Tree Plus (PVST+) runs one STP (Spanning Tree Protocol) instance per VLAN. With 10 VLANs, there are 10 instances.",
   },
   {
     id: "ccna-na-007",
@@ -446,7 +446,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the default native VLAN on a Cisco trunk port?",
     options: ["VLAN 0", "VLAN 1", "VLAN 10", "VLAN 1002"],
     correct_answer: "VLAN 1",
-    explanation: "VLAN 1 is the default native VLAN. For security, best practice is to change it to an unused VLAN.",
+explanation: "VLAN (Virtual Local Area Network) 1 is the default native VLAN. For security, best practice is to change it to an unused VLAN.",
   },
   {
     id: "ccna-na-008",
@@ -461,7 +461,7 @@ const ccnaQuestions: Question[] = [
       "switchport trunk vlan 20",
     ],
     correct_answer: "switchport mode access; switchport access vlan 20",
-    explanation: "First set the mode with 'switchport mode access', then assign the VLAN with 'switchport access vlan 20'.",
+explanation: "First set the mode with 'switchport mode access', then assign the VLAN (Virtual Local Area Network) with 'switchport access vlan 20'.",
   },
   {
     id: "ccna-na-009",
@@ -476,7 +476,7 @@ const ccnaQuestions: Question[] = [
       "Spanning tree convergence",
     ],
     correct_answer: "Bundling multiple physical links into one logical link",
-    explanation: "EtherChannel groups multiple physical links to act as one logical link, increasing bandwidth and redundancy without STP blocking them.",
+explanation: "EtherChannel groups multiple physical links to act as one logical link, increasing bandwidth and redundancy without STP (Spanning Tree Protocol) blocking them.",
   },
   {
     id: "ccna-na-010",
@@ -486,7 +486,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which two EtherChannel negotiation protocols exist?",
     options: ["LACP and PAgP", "STP and RSTP", "CDP and LLDP", "VTP and DTP"],
     correct_answer: "LACP and PAgP",
-    explanation: "LACP (802.3ad) is the open standard, PAgP is Cisco proprietary. Both negotiate EtherChannel formation between switches.",
+explanation: "LACP (Link Aggregation Control Protocol) (802.3ad) is the open standard, PAgP (Port Aggregation Protocol) is Cisco proprietary. Both negotiate EtherChannel formation between switches.",
   },
   {
     id: "ccna-na-011",
@@ -496,7 +496,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which LACP mode actively initiates negotiation?",
     options: ["Passive", "Active", "Auto", "Desirable"],
     correct_answer: "Active",
-    explanation: "LACP 'active' mode initiates negotiation. 'Passive' only responds. Two passive ports will not form a channel.",
+explanation: "LACP (Link Aggregation Control Protocol) 'active' mode initiates negotiation. 'Passive' only responds. Two passive ports will not form a channel.",
   },
   {
     id: "ccna-na-012",
@@ -511,7 +511,7 @@ const ccnaQuestions: Question[] = [
       "Dynamic Timing Protocol",
     ],
     correct_answer: "Dynamic Trunking Protocol — negotiates trunk vs access mode",
-    explanation: "DTP is Cisco's protocol for negotiating whether a link becomes a trunk. Best practice is to disable DTP and manually configure ports.",
+explanation: "DTP (Dynamic Trunking Protocol) is Cisco's protocol for negotiating whether a link becomes a trunk. Best practice is to disable DTP and manually configure ports.",
   },
   {
     id: "ccna-na-013",
@@ -526,7 +526,7 @@ const ccnaQuestions: Question[] = [
       "The one with most ports",
     ],
     correct_answer: "The one with the lowest priority (or lowest MAC as tiebreaker)",
-    explanation: "Root bridge election is based on bridge ID (priority + MAC). Lowest priority wins; if tied, lowest MAC address wins.",
+explanation: "Root bridge election is based on bridge ID (priority + MAC (Media Access Control)). Lowest priority wins; if tied, lowest MAC address wins.",
   },
   {
     id: "ccna-na-014",
@@ -536,7 +536,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the default STP priority on a Cisco switch?",
     options: ["0", "4096", "32768", "65535"],
     correct_answer: "32768",
-    explanation: "32768 is the default STP bridge priority. Lower is better — you can force root election with 'spanning-tree vlan X priority'.",
+explanation: "32768 is the default STP (Spanning Tree Protocol) bridge priority. Lower is better — you can force root election with 'spanning-tree vlan X priority'.",
   },
   {
     id: "ccna-na-015",
@@ -551,7 +551,7 @@ const ccnaQuestions: Question[] = [
       "Doubles port bandwidth",
     ],
     correct_answer: "Skips STP listening and learning states for access ports",
-    explanation: "PortFast transitions an access port directly to forwarding, avoiding the 30-second STP delay. Only use on end-device ports.",
+explanation: "PortFast transitions an access port directly to forwarding, avoiding the 30-second STP (Spanning Tree Protocol) delay. Only use on end-device ports.",
   },
   {
     id: "ccna-na-016",
@@ -566,7 +566,7 @@ const ccnaQuestions: Question[] = [
       "Blocks all BPDUs from being sent",
     ],
     correct_answer: "Disables a port that receives a BPDU",
-    explanation: "BPDU Guard is used with PortFast to err-disable a port if a BPDU is received, preventing rogue switches from affecting STP.",
+explanation: "BPDU (Bridge Protocol Data Unit) Guard is used with PortFast to err-disable a port if a BPDU is received, preventing rogue switches from affecting STP (Spanning Tree Protocol).",
   },
   {
     id: "ccna-na-017",
@@ -576,7 +576,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which frequency band does 802.11ac use?",
     options: ["2.4 GHz only", "5 GHz only", "2.4 and 5 GHz", "6 GHz only"],
     correct_answer: "5 GHz only",
-    explanation: "802.11ac operates only in 5 GHz. 802.11n supports both bands. 802.11ax (Wi-Fi 6) supports both, and Wi-Fi 6E adds 6 GHz.",
+explanation: "802.11ac operates only in 5 GHz. 802.11n supports both bands. 802.11ax (Wi-Fi 6) supports both, and Wi-Fi 6E adds 6 GHz.",
   },
   {
     id: "ccna-na-018",
@@ -591,7 +591,7 @@ const ccnaQuestions: Question[] = [
       "Binary Signal Set",
     ],
     correct_answer: "Basic Service Set — one AP and its associated clients",
-    explanation: "A BSS is a single AP with its wireless clients. Multiple BSSs with the same SSID form an ESS (Extended Service Set).",
+explanation: "A BSS (Basic Service Set) is a single AP with its wireless clients. Multiple BSSs with the same SSID (Service Set Identifier) form an ESS (Extended Service Set).",
   },
   {
     id: "ccna-na-019",
@@ -601,7 +601,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which wireless deployment uses a wireless LAN controller (WLC)?",
     options: ["Autonomous AP", "Lightweight AP", "Mesh AP only", "Ad-hoc"],
     correct_answer: "Lightweight AP",
-    explanation: "Lightweight APs tunnel traffic to a WLC using CAPWAP. Autonomous APs are standalone and don't need a controller.",
+explanation: "Lightweight APs tunnel traffic to a WLC (Wireless LAN Controller) using CAPWAP (Control and Provisioning of Wireless Access Points). Autonomous APs are standalone and don't need a controller.",
   },
   {
     id: "ccna-na-020",
@@ -611,7 +611,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What protocol does a lightweight AP use to communicate with a WLC?",
     options: ["GRE", "CAPWAP", "IPSec", "VXLAN"],
     correct_answer: "CAPWAP",
-    explanation: "Control and Provisioning of Wireless Access Points (CAPWAP) is the standard protocol between LWAPs and WLCs, running over UDP 5246/5247.",
+explanation: "Control and Provisioning of Wireless Access Points (CAPWAP) is the standard protocol between LWAPs and WLCs, running over UDP (User Datagram Protocol) 5246/5247.",
   },
   {
     id: "ccna-na-021",
@@ -621,7 +621,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which WPA version uses AES with CCMP?",
     options: ["WEP", "WPA", "WPA2", "All of the above"],
     correct_answer: "WPA2",
-    explanation: "WPA2 mandates AES-CCMP for encryption. Original WPA used TKIP. WEP uses RC4 and is insecure.",
+explanation: "WPA2 mandates AES (Advanced Encryption Standard)-CCMP for encryption. Original WPA used TKIP. WEP uses RC4 and is insecure.",
   },
   {
     id: "ccna-na-022",
@@ -636,7 +636,7 @@ const ccnaQuestions: Question[] = [
       "Controlling access to the WLC",
     ],
     correct_answer: "Identifying a wireless network",
-    explanation: "The Service Set Identifier (SSID) is the human-readable network name broadcast (or hidden) by an AP.",
+explanation: "The Service Set Identifier (SSID) is the human-readable network name broadcast (or hidden) by an AP.",
   },
   {
     id: "ccna-na-023",
@@ -646,7 +646,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which command shows configured VLANs on a Cisco switch?",
     options: ["show vlan brief", "show interfaces vlan", "show running-config", "show mac-table vlan"],
     correct_answer: "show vlan brief",
-    explanation: "'show vlan brief' lists all VLANs and which ports are assigned to them.",
+explanation: "'show vlan brief' lists all VLANs and which ports are assigned to them.",
   },
   {
     id: "ccna-na-024",
@@ -661,7 +661,7 @@ const ccnaQuestions: Question[] = [
       "It is tagged with VLAN 0",
     ],
     correct_answer: "It is assigned to the native VLAN",
-    explanation: "Untagged frames on a trunk are assigned to the native VLAN. This is why native VLAN mismatch is a security risk.",
+explanation: "Untagged frames on a trunk are assigned to the native VLAN (Virtual Local Area Network). This is why native VLAN mismatch is a security risk.",
   },
   {
     id: "ccna-na-025",
@@ -676,7 +676,7 @@ const ccnaQuestions: Question[] = [
       "Removes VLANs 10, 20, 30 from the trunk",
     ],
     correct_answer: "Restricts the trunk to only carry VLANs 10, 20, 30",
-    explanation: "This command replaces the allowed VLAN list. Use 'switchport trunk allowed vlan add X' to append without overwriting.",
+explanation: "This command replaces the allowed VLAN (Virtual Local Area Network) list. Use 'switchport trunk allowed vlan add X' to append without overwriting.",
   },
   {
     id: "ccna-na-026",
@@ -686,7 +686,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which channel is typically used on 2.4 GHz to avoid overlap in North America?",
     options: ["1, 6, 11", "2, 5, 8", "All 11 channels", "1, 5, 9"],
     correct_answer: "1, 6, 11",
-    explanation: "In North America, channels 1, 6, and 11 are the three non-overlapping channels in the 2.4 GHz band.",
+explanation: "In North America, channels 1, 6, and 11 are the three non-overlapping channels in the 2.4 GHz band.",
   },
   {
     id: "ccna-na-027",
@@ -701,7 +701,7 @@ const ccnaQuestions: Question[] = [
       "Routing inter-VLAN voice calls",
     ],
     correct_answer: "Separating voice traffic on the same port as a PC",
-    explanation: "Voice VLAN lets an IP phone tag its traffic (via CDP/LLDP) while a connected PC uses the access VLAN untagged.",
+explanation: "Voice VLAN (Virtual Local Area Network) lets an IP phone tag its traffic (via CDP (Cisco Discovery Protocol)/LLDP (Link Layer Discovery Protocol)) while a connected PC uses the access VLAN untagged.",
   },
   {
     id: "ccna-na-028",
@@ -716,7 +716,7 @@ const ccnaQuestions: Question[] = [
       "show interfaces stp 10",
     ],
     correct_answer: "show spanning-tree vlan 10",
-    explanation: "'show spanning-tree vlan 10' displays the STP topology, root bridge, and port states for that specific VLAN.",
+explanation: "'show spanning-tree vlan 10' displays the STP (Spanning Tree Protocol) topology, root bridge, and port states for that specific VLAN (Virtual Local Area Network).",
   },
   {
     id: "ccna-na-029",
@@ -731,7 +731,7 @@ const ccnaQuestions: Question[] = [
       "Blocks all BPDUs",
     ],
     correct_answer: "Prevents a downstream switch from becoming the root bridge",
-    explanation: "Root Guard puts a port into root-inconsistent state if it receives a superior BPDU, protecting the existing root bridge topology.",
+explanation: "Root Guard puts a port into root-inconsistent state if it receives a superior BPDU (Bridge Protocol Data Unit), protecting the existing root bridge topology.",
   },
   {
     id: "ccna-na-030",
@@ -741,7 +741,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which wireless security method uses a pre-shared key and is suitable for home networks?",
     options: ["WPA2-Enterprise", "WPA2-Personal", "WPA2-PSK (Personal)", "Both B and C"],
     correct_answer: "Both B and C",
-    explanation: "WPA2-Personal (aka WPA2-PSK) uses a shared passphrase. Enterprise uses 802.1X with a RADIUS server for per-user authentication.",
+explanation: "WPA2-Personal (aka WPA2-PSK) uses a shared passphrase. Enterprise uses 802.1X with a RADIUS (Remote Authentication Dial-In User Service) server for per-user authentication.",
   },
   {
     id: "ccna-na-031",
@@ -751,7 +751,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the difference between an access port and a trunk port?",
     options: [],
     correct_answer: "Access ports carry traffic for a single VLAN (untagged). Trunk ports carry traffic for multiple VLANs using 802.1Q tagging.",
-    explanation: "Access ports connect end devices. Trunk ports connect switches to switches or routers and tag frames with VLAN IDs.",
+explanation: "Access ports connect end devices. Trunk ports connect switches to switches or routers and tag frames with VLAN (Virtual Local Area Network) IDs.",
   },
   {
     id: "ccna-na-032",
@@ -761,7 +761,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which device role in a WLC architecture translates 802.11 frames to 802.3 Ethernet?",
     options: ["Lightweight AP", "WLC", "Access switch", "Core router"],
     correct_answer: "WLC",
-    explanation: "In a centralized (split-MAC) architecture, the WLC handles the 802.11-to-802.3 conversion after the AP tunnels traffic via CAPWAP.",
+explanation: "In a centralized (split-MAC (Media Access Control)) architecture, the WLC (Wireless LAN Controller) handles the 802.11-to-802.3 conversion after the AP tunnels traffic via CAPWAP (Control and Provisioning of Wireless Access Points).",
   },
   {
     id: "ccna-na-033",
@@ -776,7 +776,7 @@ const ccnaQuestions: Question[] = [
       "Use VLAN 0",
     ],
     correct_answer: "Change it to an unused VLAN and don't use it for user traffic",
-    explanation: "Changing the native VLAN away from VLAN 1 helps prevent VLAN hopping attacks and aligns with Cisco hardening guidelines.",
+explanation: "Changing the native VLAN (Virtual Local Area Network) away from VLAN 1 helps prevent VLAN hopping attacks and aligns with Cisco hardening guidelines.",
   },
 
   // ═══════════════════════════════════════════════════════════════════════
@@ -790,7 +790,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the default administrative distance of OSPF?",
     options: ["90", "100", "110", "120"],
     correct_answer: "110",
-    explanation: "OSPF AD is 110. EIGRP internal is 90, RIP is 120, static is 1, connected is 0.",
+explanation: "OSPF (Open Shortest Path First) AD is 110. EIGRP (Enhanced Interior Gateway Routing Protocol) internal is 90, RIP (Routing Information Protocol) is 120, static is 1, connected is 0.",
   },
   {
     id: "ccna-ipc-002",
@@ -800,7 +800,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the default administrative distance of EIGRP internal routes?",
     options: ["90", "100", "110", "120"],
     correct_answer: "90",
-    explanation: "EIGRP internal routes have AD 90. EIGRP external is 170. Lower AD is preferred when multiple protocols learn the same route.",
+explanation: "EIGRP (Enhanced Interior Gateway Routing Protocol) internal routes have AD 90. EIGRP external is 170. Lower AD is preferred when multiple protocols learn the same route.",
   },
   {
     id: "ccna-ipc-003",
@@ -810,7 +810,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which metric does OSPF use to determine the best path?",
     options: ["Hop count", "Bandwidth (cost)", "Delay plus bandwidth", "Ticks"],
     correct_answer: "Bandwidth (cost)",
-    explanation: "OSPF cost = reference bandwidth / interface bandwidth. Default reference is 100 Mbps; lower cost is preferred.",
+explanation: "OSPF (Open Shortest Path First) cost = reference bandwidth / interface bandwidth. Default reference is 100 Mbps; lower cost is preferred.",
   },
   {
     id: "ccna-ipc-004",
@@ -825,7 +825,7 @@ const ccnaQuestions: Question[] = [
       "route add default 10.1.1.1",
     ],
     correct_answer: "ip route 0.0.0.0 0.0.0.0 10.1.1.1",
-    explanation: "The quad-zero route matches any destination. 'ip default-gateway' is used on L2 switches, not on routers with ip routing enabled.",
+explanation: "The quad-zero route matches any destination. 'ip default-gateway' is used on L2 switches, not on routers with ip routing enabled.",
   },
   {
     id: "ccna-ipc-005",
@@ -835,7 +835,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which LSA type does an OSPF ABR generate for inter-area routes?",
     options: ["Type 1 (Router)", "Type 2 (Network)", "Type 3 (Summary)", "Type 5 (External)"],
     correct_answer: "Type 3 (Summary)",
-    explanation: "Area Border Routers generate Type 3 Summary LSAs to advertise routes between OSPF areas.",
+explanation: "Area Border Routers generate Type 3 Summary LSAs to advertise routes between OSPF (Open Shortest Path First) areas.",
   },
   {
     id: "ccna-ipc-006",
@@ -850,7 +850,7 @@ const ccnaQuestions: Question[] = [
       "A route without a next hop",
     ],
     correct_answer: "A static route with a higher AD than the primary protocol, used as a backup",
-    explanation: "Example: 'ip route 0.0.0.0 0.0.0.0 10.1.1.1 210' — AD 210 keeps it inactive unless the primary route (e.g., OSPF AD 110) fails.",
+explanation: "Example: 'ip route 0.0.0.0 0.0.0.0 10.1.1.1 210' — AD 210 keeps it inactive unless the primary route (e.g., OSPF (Open Shortest Path First) AD 110) fails.",
   },
   {
     id: "ccna-ipc-007",
@@ -860,7 +860,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which OSPF router type sits between two areas?",
     options: ["ABR", "ASBR", "Backbone router", "Internal router"],
     correct_answer: "ABR",
-    explanation: "Area Border Routers have interfaces in two or more OSPF areas, one of which must be area 0 (backbone).",
+explanation: "Area Border Routers have interfaces in two or more OSPF (Open Shortest Path First) areas, one of which must be area 0 (backbone).",
   },
   {
     id: "ccna-ipc-008",
@@ -870,7 +870,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which OSPF router injects external routes (e.g., redistributed from another protocol) into OSPF?",
     options: ["ABR", "ASBR", "DR", "BDR"],
     correct_answer: "ASBR",
-    explanation: "The Autonomous System Boundary Router redistributes routes from outside sources into OSPF as Type 5 LSAs.",
+explanation: "The Autonomous System Boundary Router redistributes routes from outside sources into OSPF (Open Shortest Path First) as Type 5 LSAs.",
   },
   {
     id: "ccna-ipc-009",
@@ -880,7 +880,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is OSPF area 0 also called?",
     options: ["Backbone area", "Stub area", "NSSA", "Transit area"],
     correct_answer: "Backbone area",
-    explanation: "Area 0 is the backbone area. All other areas must connect to area 0, directly or through a virtual link.",
+explanation: "Area 0 is the backbone area. All other areas must connect to area 0, directly or through a virtual link.",
   },
   {
     id: "ccna-ipc-010",
@@ -890,7 +890,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which multicast address does OSPF use to send hello packets?",
     options: ["224.0.0.5", "224.0.0.6", "224.0.0.9", "224.0.0.10"],
     correct_answer: "224.0.0.5",
-    explanation: "All OSPF routers use 224.0.0.5. DR/BDR use 224.0.0.6 for their updates. EIGRP uses 224.0.0.10.",
+explanation: "All OSPF (Open Shortest Path First) routers use 224.0.0.5. DR/BDR (Backup Designated Router) use 224.0.0.6 for their updates. EIGRP (Enhanced Interior Gateway Routing Protocol) uses 224.0.0.10.",
   },
   {
     id: "ccna-ipc-011",
@@ -900,7 +900,7 @@ const ccnaQuestions: Question[] = [
     prompt: "On a broadcast OSPF segment, which routers form full adjacencies with the DR?",
     options: ["Only the BDR", "All non-DR routers", "Only the ABR", "No routers"],
     correct_answer: "All non-DR routers",
-    explanation: "Non-DR routers (DROthers) only form full adjacencies with the DR and BDR, not with each other.",
+explanation: "Non-DR routers (DROthers) only form full adjacencies with the DR and BDR (Backup Designated Router), not with each other.",
   },
   {
     id: "ccna-ipc-012",
@@ -910,7 +910,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which command displays the IP routing table on a Cisco router?",
     options: ["show ip route", "show routes", "display route", "show running-config routes"],
     correct_answer: "show ip route",
-    explanation: "'show ip route' shows all routes with their source, AD, metric, next hop, and outgoing interface.",
+explanation: "'show ip route' shows all routes with their source, AD, metric, next hop, and outgoing interface.",
   },
   {
     id: "ccna-ipc-013",
@@ -920,7 +920,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What does a 'C' code in 'show ip route' indicate?",
     options: ["Candidate default", "Connected", "Computed", "CEF"],
     correct_answer: "Connected",
-    explanation: "'C' marks a directly connected route. 'L' is local (host /32), 'S' is static, 'O' is OSPF, 'D' is EIGRP.",
+explanation: "'C' marks a directly connected route. 'L' is local (host /32), 'S' is static, 'O' is OSPF (Open Shortest Path First), 'D' is EIGRP (Enhanced Interior Gateway Routing Protocol).",
   },
   {
     id: "ccna-ipc-014",
@@ -930,7 +930,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which routing protocol uses DUAL to compute loop-free paths?",
     options: ["OSPF", "RIP", "EIGRP", "BGP"],
     correct_answer: "EIGRP",
-    explanation: "EIGRP uses the Diffusing Update Algorithm (DUAL) to compute successor and feasible successor routes.",
+explanation: "EIGRP (Enhanced Interior Gateway Routing Protocol) uses the Diffusing Update Algorithm (DUAL) to compute successor and feasible successor routes.",
   },
   {
     id: "ccna-ipc-015",
@@ -945,7 +945,7 @@ const ccnaQuestions: Question[] = [
       "A hello packet sender",
     ],
     correct_answer: "The best (lowest metric) route in the topology table",
-    explanation: "A successor is the primary route. A feasible successor is a backup that meets the feasibility condition.",
+explanation: "A successor is the primary route. A feasible successor is a backup that meets the feasibility condition.",
   },
   {
     id: "ccna-ipc-016",
@@ -960,7 +960,7 @@ const ccnaQuestions: Question[] = [
       "First route learned wins",
     ],
     correct_answer: "Most specific (longest) prefix wins",
-    explanation: "Routers always prefer the most specific route. AD and metric only matter when two routes have the same prefix length.",
+explanation: "Routers always prefer the most specific route. AD and metric only matter when two routes have the same prefix length.",
   },
   {
     id: "ccna-ipc-017",
@@ -975,7 +975,7 @@ const ccnaQuestions: Question[] = [
       "Both A and B are valid OSPF configuration methods",
     ],
     correct_answer: "Both A and B are valid OSPF configuration methods",
-    explanation: "OSPF can be enabled either with network statements under 'router ospf' or with 'ip ospf X area Y' under the interface.",
+explanation: "OSPF (Open Shortest Path First) can be enabled either with network statements under 'router ospf' or with 'ip ospf X area Y' under the interface.",
   },
   {
     id: "ccna-ipc-018",
@@ -990,7 +990,7 @@ const ccnaQuestions: Question[] = [
       "Determines interface cost",
     ],
     correct_answer: "Uniquely identifies the router in the OSPF domain",
-    explanation: "Router ID is a 32-bit value (often formatted as an IPv4 address) that uniquely identifies an OSPF router. It can be set manually or derived from interface IPs.",
+explanation: "Router ID is a 32-bit value (often formatted as an IPv4 address) that uniquely identifies an OSPF (Open Shortest Path First) router. It can be set manually or derived from interface IPs.",
   },
   {
     id: "ccna-ipc-019",
@@ -1005,7 +1005,7 @@ const ccnaQuestions: Question[] = [
       "Configured hostname",
     ],
     correct_answer: "Highest IP on a loopback, or highest IP on any interface if no loopbacks exist",
-    explanation: "OSPF prefers the highest loopback IP because loopbacks never go down. Without loopbacks, it uses the highest IP on any up interface.",
+explanation: "OSPF (Open Shortest Path First) prefers the highest loopback IP because loopbacks never go down. Without loopbacks, it uses the highest IP on any up interface.",
   },
   {
     id: "ccna-ipc-020",
@@ -1020,7 +1020,7 @@ const ccnaQuestions: Question[] = [
       "They form a partial adjacency",
     ],
     correct_answer: "They will not form a neighbor adjacency",
-    explanation: "Hello and dead timers must match between OSPF neighbors for an adjacency to form. Other required matches include area ID and authentication.",
+explanation: "Hello and dead timers must match between OSPF (Open Shortest Path First) neighbors for an adjacency to form. Other required matches include area ID and authentication.",
   },
   {
     id: "ccna-ipc-021",
@@ -1030,7 +1030,7 @@ const ccnaQuestions: Question[] = [
     prompt: "How long is the default OSPF hello interval on a broadcast network?",
     options: ["5 seconds", "10 seconds", "30 seconds", "60 seconds"],
     correct_answer: "10 seconds",
-    explanation: "On broadcast and point-to-point, OSPF hellos are 10 seconds, dead is 40. On NBMA, hellos are 30, dead is 120.",
+explanation: "On broadcast and point-to-point, OSPF (Open Shortest Path First) hellos are 10 seconds, dead is 40. On NBMA, hellos are 30, dead is 120.",
   },
   {
     id: "ccna-ipc-022",
@@ -1045,7 +1045,7 @@ const ccnaQuestions: Question[] = [
       "The route has the lowest AD of all candidates",
     ],
     correct_answer: "The route has the lowest AD of all candidates",
-    explanation: "A route with the lowest AD is the one that WILL install. The others are all valid reasons a static route fails to enter the routing table.",
+explanation: "A route with the lowest AD is the one that WILL install. The others are all valid reasons a static route fails to enter the routing table.",
   },
   {
     id: "ccna-ipc-023",
@@ -1060,7 +1060,7 @@ const ccnaQuestions: Question[] = [
       "Stores MAC addresses",
     ],
     correct_answer: "Stores forwarding information derived from the routing table",
-    explanation: "The Forwarding Information Base is a CEF data structure that mirrors the routing table for fast hardware lookups.",
+explanation: "The Forwarding Information Base is a CEF (Cisco Express Forwarding) data structure that mirrors the routing table for fast hardware lookups.",
   },
   {
     id: "ccna-ipc-024",
@@ -1070,7 +1070,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which route has the lowest administrative distance?",
     options: ["Static route with next-hop IP", "OSPF route", "Directly connected", "EIGRP internal"],
     correct_answer: "Directly connected",
-    explanation: "Directly connected routes have AD 0. Static with next-hop is 1, EIGRP internal is 90, OSPF is 110.",
+explanation: "Directly connected routes have AD 0. Static with next-hop is 1, EIGRP (Enhanced Interior Gateway Routing Protocol) internal is 90, OSPF (Open Shortest Path First) is 110.",
   },
   {
     id: "ccna-ipc-025",
@@ -1085,7 +1085,7 @@ const ccnaQuestions: Question[] = [
       "Triggers an error log",
     ],
     correct_answer: "Sends traffic to null0 (discards it)",
-    explanation: "Routes pointing to null0 silently discard matching packets. Useful for summarization and blackhole routing.",
+explanation: "Routes pointing to null0 silently discard matching packets. Useful for summarization and blackhole routing.",
   },
   {
     id: "ccna-ipc-026",
@@ -1100,7 +1100,7 @@ const ccnaQuestions: Question[] = [
       "Failover Host Relay Protocol",
     ],
     correct_answer: "First Hop Redundancy Protocol",
-    explanation: "FHRPs (HSRP, VRRP, GLBP) provide a virtual gateway so end hosts have a highly available default gateway.",
+explanation: "FHRPs (HSRP (Hot Standby Router Protocol), VRRP (Virtual Router Redundancy Protocol), GLBP (Gateway Load Balancing Protocol)) provide a virtual gateway so end hosts have a highly available default gateway.",
   },
   {
     id: "ccna-ipc-027",
@@ -1110,7 +1110,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which FHRP is Cisco proprietary?",
     options: ["VRRP", "HSRP", "GLBP", "Both HSRP and GLBP"],
     correct_answer: "Both HSRP and GLBP",
-    explanation: "HSRP and GLBP are Cisco proprietary. VRRP is the open standard (RFC 5798).",
+explanation: "HSRP (Hot Standby Router Protocol) and GLBP (Gateway Load Balancing Protocol) are Cisco proprietary. VRRP (Virtual Router Redundancy Protocol) is the open standard (RFC 5798).",
   },
   {
     id: "ccna-ipc-028",
@@ -1120,7 +1120,7 @@ const ccnaQuestions: Question[] = [
     prompt: "In HSRP, which router actively forwards traffic for the virtual IP?",
     options: ["Standby router", "Active router", "Listen router", "Speak router"],
     correct_answer: "Active router",
-    explanation: "The active router forwards traffic for the virtual IP/MAC. The standby takes over if the active fails.",
+explanation: "The active router forwards traffic for the virtual IP/MAC (Media Access Control). The standby takes over if the active fails.",
   },
   {
     id: "ccna-ipc-029",
@@ -1135,7 +1135,7 @@ const ccnaQuestions: Question[] = [
       "First router online",
     ],
     correct_answer: "Highest priority (default 100); higher IP breaks ties",
-    explanation: "HSRP priority defaults to 100. Higher priority wins; ties are broken by highest IP address on the HSRP interface.",
+explanation: "HSRP (Hot Standby Router Protocol) priority defaults to 100. Higher priority wins; ties are broken by highest IP address on the HSRP interface.",
   },
   {
     id: "ccna-ipc-030",
@@ -1145,7 +1145,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which route is selected if an OSPF route and an EIGRP route both exist for the same destination?",
     options: ["OSPF (AD 110)", "EIGRP (AD 90)", "Whichever was learned first", "The one with lower metric"],
     correct_answer: "EIGRP (AD 90)",
-    explanation: "Administrative distance is the first tiebreaker. EIGRP internal (90) beats OSPF (110).",
+explanation: "Administrative distance is the first tiebreaker. EIGRP (Enhanced Interior Gateway Routing Protocol) internal (90) beats OSPF (Open Shortest Path First) (110).",
   },
   {
     id: "ccna-ipc-031",
@@ -1160,7 +1160,7 @@ const ccnaQuestions: Question[] = [
       "All routes are blocked",
     ],
     correct_answer: "OSPF will advertise the network but not send hellos on that interface",
-    explanation: "Passive-interface suppresses hellos on an interface but still includes its network in OSPF advertisements. Useful for LAN segments with no OSPF neighbors.",
+explanation: "Passive-interface suppresses hellos on an interface but still includes its network in OSPF (Open Shortest Path First) advertisements. Useful for LAN segments with no OSPF neighbors.",
   },
   {
     id: "ccna-ipc-032",
@@ -1170,7 +1170,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the OSPF equal-cost multipath (ECMP) default maximum number of paths?",
     options: ["2", "4", "8", "16"],
     correct_answer: "4",
-    explanation: "By default, OSPF installs up to 4 equal-cost paths. This can be increased with 'maximum-paths' under the OSPF process.",
+explanation: "By default, OSPF (Open Shortest Path First) installs up to 4 equal-cost paths. This can be increased with 'maximum-paths' under the OSPF process.",
   },
   {
     id: "ccna-ipc-033",
@@ -1180,7 +1180,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the difference between a routing protocol and a routed protocol?",
     options: [],
     correct_answer: "A routing protocol (OSPF, EIGRP) discovers routes. A routed protocol (IP, IPv6) is the protocol whose packets are being routed.",
-    explanation: "Routing protocols build the routing table. Routed protocols are the data being forwarded based on that table.",
+explanation: "Routing protocols build the routing table. Routed protocols are the data being forwarded based on that table.",
   },
   {
     id: "ccna-ipc-034",
@@ -1195,7 +1195,7 @@ const ccnaQuestions: Question[] = [
       "static route 10.1.1.0 255.255.255.0",
     ],
     correct_answer: "ip route 10.1.1.0 255.255.255.0 192.168.1.1",
-    explanation: "Cisco IOS syntax: ip route <destination> <mask> <next-hop-or-exit-interface>.",
+explanation: "Cisco IOS syntax: ip route <destination> <mask> <next-hop-or-exit-interface>.",
   },
 
   // ═══════════════════════════════════════════════════════════════════════
@@ -1209,7 +1209,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which DHCP message does a client send first?",
     options: ["DHCPREQUEST", "DHCPOFFER", "DHCPDISCOVER", "DHCPACK"],
     correct_answer: "DHCPDISCOVER",
-    explanation: "DORA: Discover → Offer → Request → Acknowledge. The client broadcasts DHCPDISCOVER to find servers.",
+explanation: "DORA (Discover, Offer, Request, Acknowledge): Discover → Offer → Request → Acknowledge. The client broadcasts DHCPDISCOVER to find servers.",
   },
   {
     id: "ccna-ips-002",
@@ -1219,7 +1219,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which UDP ports does DHCP use?",
     options: ["67 (server), 68 (client)", "53 (both)", "80 (server), 443 (client)", "500 and 4500"],
     correct_answer: "67 (server), 68 (client)",
-    explanation: "DHCP servers listen on UDP 67 and clients use UDP 68. Both are critical for DORA exchanges.",
+explanation: "DHCP (Dynamic Host Configuration Protocol) servers listen on UDP (User Datagram Protocol) 67 and clients use UDP 68. Both are critical for DORA (Discover, Offer, Request, Acknowledge) exchanges.",
   },
   {
     id: "ccna-ips-003",
@@ -1234,7 +1234,7 @@ const ccnaQuestions: Question[] = [
       "dhcp relay <server-ip>",
     ],
     correct_answer: "ip helper-address <server-ip>",
-    explanation: "'ip helper-address' configured on the router's receiving interface relays DHCP and several other UDP services to a specified server.",
+explanation: "'ip helper-address' configured on the router's receiving interface relays DHCP (Dynamic Host Configuration Protocol) and several other UDP (User Datagram Protocol) services to a specified server.",
   },
   {
     id: "ccna-ips-004",
@@ -1249,7 +1249,7 @@ const ccnaQuestions: Question[] = [
       "DHCP starvation",
     ],
     correct_answer: "IPv4 address exhaustion",
-    explanation: "NAT lets multiple private IPs share public IPs, conserving IPv4 space. It also provides a layer of privacy.",
+explanation: "NAT (Network Address Translation) lets multiple private IPs share public IPs, conserving IPv4 space. It also provides a layer of privacy.",
   },
   {
     id: "ccna-ips-005",
@@ -1264,7 +1264,7 @@ const ccnaQuestions: Question[] = [
       "Static IP translation only",
     ],
     correct_answer: "Many private IPs to one public IP using different ports",
-    explanation: "Port Address Translation uses unique source ports to distinguish between many internal hosts sharing a single public IP.",
+explanation: "Port Address Translation uses unique source ports to distinguish between many internal hosts sharing a single public IP.",
   },
   {
     id: "ccna-ips-006",
@@ -1274,7 +1274,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which port does DNS use for standard queries?",
     options: ["UDP 53", "TCP 53", "UDP 67", "TCP 80"],
     correct_answer: "UDP 53",
-    explanation: "DNS uses UDP 53 for standard queries. TCP 53 is used for zone transfers and responses larger than 512 bytes.",
+explanation: "DNS (Domain Name System) uses UDP (User Datagram Protocol) 53 for standard queries. TCP (Transmission Control Protocol) 53 is used for zone transfers and responses larger than 512 bytes.",
   },
   {
     id: "ccna-ips-007",
@@ -1284,7 +1284,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which DNS record maps a hostname to an IPv4 address?",
     options: ["AAAA", "CNAME", "A", "MX"],
     correct_answer: "A",
-    explanation: "A records map hostnames to IPv4 addresses. AAAA is for IPv6, CNAME is an alias, MX is for mail servers.",
+explanation: "A records map hostnames to IPv4 addresses. AAAA is for IPv6, CNAME is an alias, MX is for mail servers.",
   },
   {
     id: "ccna-ips-008",
@@ -1294,7 +1294,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which DNS record is used for IPv6?",
     options: ["A", "AAAA", "PTR", "NS"],
     correct_answer: "AAAA",
-    explanation: "AAAA (pronounced 'quad-A') records map hostnames to IPv6 addresses.",
+explanation: "AAAA (pronounced 'quad-A') records map hostnames to IPv6 addresses.",
   },
   {
     id: "ccna-ips-009",
@@ -1309,7 +1309,7 @@ const ccnaQuestions: Question[] = [
       "Monitoring link state",
     ],
     correct_answer: "Synchronizing clocks across devices",
-    explanation: "Network Time Protocol synchronizes device clocks, which is critical for logs, certificates, and authentication.",
+explanation: "Network Time Protocol synchronizes device clocks, which is critical for logs, certificates, and authentication.",
   },
   {
     id: "ccna-ips-010",
@@ -1319,7 +1319,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which UDP port does NTP use?",
     options: ["53", "67", "123", "161"],
     correct_answer: "123",
-    explanation: "NTP runs on UDP port 123.",
+explanation: "NTP (Network Time Protocol) runs on UDP (User Datagram Protocol) port 123.",
   },
   {
     id: "ccna-ips-011",
@@ -1334,7 +1334,7 @@ const ccnaQuestions: Question[] = [
       "An untrusted source",
     ],
     correct_answer: "A high-precision reference clock (e.g., atomic clock)",
-    explanation: "Stratum 0 are reference clocks like GPS or atomic clocks. Stratum 1 servers sync directly with them; each level away adds 1 to stratum.",
+explanation: "Stratum 0 are reference clocks like GPS or atomic clocks. Stratum 1 servers sync directly with them; each level away adds 1 to stratum.",
   },
   {
     id: "ccna-ips-012",
@@ -1349,7 +1349,7 @@ const ccnaQuestions: Question[] = [
       "System Network Management Protocol",
     ],
     correct_answer: "Simple Network Management Protocol",
-    explanation: "SNMP is used to monitor and manage network devices, collecting metrics and sending traps.",
+explanation: "SNMP (Simple Network Management Protocol) is used to monitor and manage network devices, collecting metrics and sending traps.",
   },
   {
     id: "ccna-ips-013",
@@ -1359,7 +1359,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which SNMP version introduced strong encryption and authentication?",
     options: ["SNMPv1", "SNMPv2c", "SNMPv3", "SNMPv4"],
     correct_answer: "SNMPv3",
-    explanation: "SNMPv3 added authentication (HMAC) and encryption (DES/AES). v1 and v2c only use community strings in clear text.",
+explanation: "SNMPv3 added authentication (HMAC) and encryption (DES/AES (Advanced Encryption Standard)). v1 and v2c only use community strings in clear text.",
   },
   {
     id: "ccna-ips-014",
@@ -1369,7 +1369,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which UDP ports does SNMP use?",
     options: ["161 (get/set) and 162 (traps)", "123 and 124", "67 and 68", "514 and 515"],
     correct_answer: "161 (get/set) and 162 (traps)",
-    explanation: "SNMP agents listen on UDP 161. Traps are sent to managers on UDP 162.",
+explanation: "SNMP (Simple Network Management Protocol) agents listen on UDP (User Datagram Protocol) 161. Traps are sent to managers on UDP 162.",
   },
   {
     id: "ccna-ips-015",
@@ -1384,7 +1384,7 @@ const ccnaQuestions: Question[] = [
       "Address translation",
     ],
     correct_answer: "Sending log messages to a central server",
-    explanation: "Syslog forwards device logs to a central collector. Default UDP port is 514.",
+explanation: "Syslog forwards device logs to a central collector. Default UDP (User Datagram Protocol) port is 514.",
   },
   {
     id: "ccna-ips-016",
@@ -1394,7 +1394,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which syslog severity level is most severe?",
     options: ["0 (Emergency)", "3 (Error)", "5 (Notice)", "7 (Debug)"],
     correct_answer: "0 (Emergency)",
-    explanation: "Syslog severities go 0-7: Emergency (0) is most severe, Debug (7) is least. Lower number = higher severity.",
+explanation: "Syslog severities go 0-7: Emergency (0) is most severe, Debug (7) is least. Lower number = higher severity.",
   },
   {
     id: "ccna-ips-017",
@@ -1404,7 +1404,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What does QoS DSCP EF (Expedited Forwarding) typically mark?",
     options: ["Best effort", "Voice traffic", "Scavenger traffic", "Network control"],
     correct_answer: "Voice traffic",
-    explanation: "DSCP EF (46) is reserved for low-latency, low-jitter traffic like voice RTP streams.",
+explanation: "DSCP (Differentiated Services Code Point) EF (46) is reserved for low-latency, low-jitter traffic like voice RTP streams.",
   },
   {
     id: "ccna-ips-018",
@@ -1419,7 +1419,7 @@ const ccnaQuestions: Question[] = [
       "Translating addresses",
     ],
     correct_answer: "Identifying and marking traffic types for differential treatment",
-    explanation: "Classification identifies traffic (e.g., voice, video, bulk) so it can be marked and queued appropriately downstream.",
+explanation: "Classification identifies traffic (e.g., voice, video, bulk) so it can be marked and queued appropriately downstream.",
   },
   {
     id: "ccna-ips-019",
@@ -1429,7 +1429,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which QoS mechanism drops or remarks traffic that exceeds a threshold?",
     options: ["Shaping", "Policing", "Classification", "Queuing"],
     correct_answer: "Policing",
-    explanation: "Policing drops or remarks excess traffic immediately. Shaping buffers excess traffic to smooth it out.",
+explanation: "Policing drops or remarks excess traffic immediately. Shaping buffers excess traffic to smooth it out.",
   },
   {
     id: "ccna-ips-020",
@@ -1444,7 +1444,7 @@ const ccnaQuestions: Question[] = [
       "Only DNAT exists in Cisco IOS",
     ],
     correct_answer: "SNAT changes source, DNAT changes destination",
-    explanation: "Source NAT typically translates internal clients to public IPs (outbound). Destination NAT translates external access to internal servers (inbound).",
+explanation: "Source NAT (Network Address Translation) typically translates internal clients to public IPs (outbound). Destination NAT translates external access to internal servers (inbound).",
   },
   {
     id: "ccna-ips-021",
@@ -1459,7 +1459,7 @@ const ccnaQuestions: Question[] = [
       "ip dhcp get",
     ],
     correct_answer: "ip address dhcp",
-    explanation: "Under the interface, 'ip address dhcp' causes the router to obtain its IP via DHCP.",
+explanation: "Under the interface, 'ip address dhcp' causes the router to obtain its IP via DHCP (Dynamic Host Configuration Protocol).",
   },
   {
     id: "ccna-ips-022",
@@ -1474,7 +1474,7 @@ const ccnaQuestions: Question[] = [
       "An external host's translated IP",
     ],
     correct_answer: "The actual private IP of an internal host",
-    explanation: "Cisco NAT terms: inside local = real private IP of inside host; inside global = its translated public IP.",
+explanation: "Cisco NAT (Network Address Translation) terms: inside local = real private IP of inside host; inside global = its translated public IP.",
   },
   {
     id: "ccna-ips-023",
@@ -1489,7 +1489,7 @@ const ccnaQuestions: Question[] = [
       "show running-config nat",
     ],
     correct_answer: "show ip nat translations",
-    explanation: "'show ip nat translations' lists all active NAT entries with inside/outside local and global addresses.",
+explanation: "'show ip nat translations' lists all active NAT (Network Address Translation) entries with inside/outside local and global addresses.",
   },
   {
     id: "ccna-ips-024",
@@ -1499,7 +1499,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which of the following is NOT a valid QoS marking location?",
     options: ["Layer 2 CoS (802.1p)", "Layer 3 DSCP", "Layer 3 IP Precedence", "Layer 4 port markings"],
     correct_answer: "Layer 4 port markings",
-    explanation: "QoS markings exist at L2 (CoS) and L3 (DSCP/IP Precedence). L4 ports can be used for classification but are not marking locations themselves.",
+explanation: "QoS (Quality of Service) markings exist at L2 (CoS) and L3 (DSCP (Differentiated Services Code Point)/IP Precedence). L4 ports can be used for classification but are not marking locations themselves.",
   },
   {
     id: "ccna-ips-025",
@@ -1509,7 +1509,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which protocol is used for secure file transfer and management?",
     options: ["FTP", "TFTP", "SFTP", "SMTP"],
     correct_answer: "SFTP",
-    explanation: "SFTP (SSH File Transfer Protocol) provides encrypted file transfer over SSH. FTP and TFTP are unencrypted.",
+explanation: "SFTP (SSH (Secure Shell) File Transfer Protocol) provides encrypted file transfer over SSH. FTP (File Transfer Protocol) and TFTP (Trivial File Transfer Protocol) are unencrypted.",
   },
   {
     id: "ccna-ips-026",
@@ -1519,7 +1519,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which port does TFTP use?",
     options: ["UDP 21", "TCP 21", "UDP 69", "TCP 69"],
     correct_answer: "UDP 69",
-    explanation: "TFTP uses UDP 69 and is commonly used for IOS image transfers on Cisco devices.",
+explanation: "TFTP (Trivial File Transfer Protocol) uses UDP (User Datagram Protocol) 69 and is commonly used for IOS image transfers on Cisco devices.",
   },
   {
     id: "ccna-ips-027",
@@ -1529,7 +1529,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which port does SMTP use by default?",
     options: ["21", "23", "25", "110"],
     correct_answer: "25",
-    explanation: "SMTP uses TCP port 25 for mail transfer. 587 is used for authenticated submission. 110 is POP3.",
+explanation: "SMTP (Simple Mail Transfer Protocol) uses TCP (Transmission Control Protocol) port 25 for mail transfer. 587 is used for authenticated submission. 110 is POP3 (Post Office Protocol version 3).",
   },
   {
     id: "ccna-ips-028",
@@ -1539,7 +1539,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which DHCP option provides the default gateway to clients?",
     options: ["Option 3", "Option 6", "Option 15", "Option 66"],
     correct_answer: "Option 3",
-    explanation: "Option 3 = default gateway. Option 6 = DNS, Option 15 = domain name, Option 66 = TFTP server (used by IP phones).",
+explanation: "Option 3 = default gateway. Option 6 = DNS (Domain Name System), Option 15 = domain name, Option 66 = TFTP (Trivial File Transfer Protocol) server (used by IP phones).",
   },
   {
     id: "ccna-ips-029",
@@ -1554,7 +1554,7 @@ const ccnaQuestions: Question[] = [
       "Neither affects traffic rate",
     ],
     correct_answer: "Policing drops/remarks excess traffic, shaping buffers it",
-    explanation: "Policing enforces a hard rate by discarding or remarking. Shaping queues excess into a buffer to smooth bursts.",
+explanation: "Policing enforces a hard rate by discarding or remarking. Shaping queues excess into a buffer to smooth bursts.",
   },
   {
     id: "ccna-ips-030",
@@ -1564,7 +1564,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which Cisco command verifies NTP synchronization status?",
     options: ["show ntp", "show ntp status", "show clock ntp", "show time"],
     correct_answer: "show ntp status",
-    explanation: "'show ntp status' displays sync state, stratum, and reference clock. 'show ntp associations' shows peers.",
+explanation: "'show ntp status' displays sync state, stratum, and reference clock. 'show ntp associations' shows peers.",
   },
   {
     id: "ccna-ips-031",
@@ -1574,7 +1574,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is NAT and what problem does it solve?",
     options: [],
     correct_answer: "Network Address Translation converts private IPs to public IPs, allowing multiple internal devices to share public IPs and conserving IPv4 space.",
-    explanation: "NAT is commonly used with PAT (NAT overload) to let many private hosts share a single public IP via unique source ports.",
+explanation: "NAT (Network Address Translation) is commonly used with PAT (Port Address Translation) (NAT overload) to let many private hosts share a single public IP via unique source ports.",
   },
   {
     id: "ccna-ips-032",
@@ -1584,7 +1584,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which tool is commonly used to push configurations to Cisco devices over encrypted channels?",
     options: ["Telnet", "SSH", "HTTP", "FTP"],
     correct_answer: "SSH",
-    explanation: "SSH (TCP 22) provides encrypted remote management. Telnet (TCP 23) is clear text and should be disabled.",
+explanation: "SSH (Secure Shell) (TCP (Transmission Control Protocol) 22) provides encrypted remote management. Telnet (TCP 23) is clear text and should be disabled.",
   },
   {
     id: "ccna-ips-033",
@@ -1594,7 +1594,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which UDP port does syslog traditionally use?",
     options: ["25", "161", "514", "1812"],
     correct_answer: "514",
-    explanation: "Syslog sends messages over UDP 514 by default. TCP 514 and TLS-based syslog on 6514 are also supported by many implementations.",
+explanation: "Syslog sends messages over UDP (User Datagram Protocol) 514 by default. TCP (Transmission Control Protocol) 514 and TLS (Transport Layer Security)-based syslog on 6514 are also supported by many implementations.",
   },
 
   // ═══════════════════════════════════════════════════════════════════════
@@ -1613,7 +1613,7 @@ const ccnaQuestions: Question[] = [
       "enable ssh",
     ],
     correct_answer: "crypto key generate rsa",
-    explanation: "RSA keys are required for SSH to function. You must generate them before SSH can be used, typically with at least 1024-bit modulus.",
+explanation: "RSA (Rivest-Shamir-Adleman) keys are required for SSH (Secure Shell) to function. You must generate them before SSH can be used, typically with at least 1024-bit modulus.",
   },
   {
     id: "ccna-sec-002",
@@ -1628,7 +1628,7 @@ const ccnaQuestions: Question[] = [
       "Allow, Acknowledge, Audit",
     ],
     correct_answer: "Authentication, Authorization, Accounting",
-    explanation: "AAA: Authentication verifies who you are, Authorization determines what you can do, Accounting logs what you did.",
+explanation: "AAA (Authentication, Authorization, and Accounting): Authentication verifies who you are, Authorization determines what you can do, Accounting logs what you did.",
   },
   {
     id: "ccna-sec-003",
@@ -1638,7 +1638,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which port does HTTPS use?",
     options: ["80", "443", "8080", "8443"],
     correct_answer: "443",
-    explanation: "HTTPS uses TCP 443. HTTP uses 80. 8080 and 8443 are common alternates for proxies and management interfaces.",
+explanation: "HTTPS (Hypertext Transfer Protocol Secure) uses TCP (Transmission Control Protocol) 443. HTTP (Hypertext Transfer Protocol) uses 80. 8080 and 8443 are common alternates for proxies and management interfaces.",
   },
   {
     id: "ccna-sec-004",
@@ -1653,7 +1653,7 @@ const ccnaQuestions: Question[] = [
       "Shuts down unused ports",
     ],
     correct_answer: "Limits allowed MAC addresses per port",
-    explanation: "Port security restricts how many MACs can appear on a port and defines a violation action (shutdown, restrict, protect).",
+explanation: "Port security restricts how many MACs can appear on a port and defines a violation action (shutdown, restrict, protect).",
   },
   {
     id: "ccna-sec-005",
@@ -1663,7 +1663,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which port security violation mode drops violating traffic and increments counters WITHOUT logging or disabling the port?",
     options: ["shutdown", "restrict", "protect", "err-disable"],
     correct_answer: "protect",
-    explanation: "Protect silently drops. Restrict drops and logs. Shutdown (default) err-disables the port.",
+explanation: "Protect silently drops. Restrict drops and logs. Shutdown (default) err-disables the port.",
   },
   {
     id: "ccna-sec-006",
@@ -1673,7 +1673,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which ACL type matches only source IP?",
     options: ["Standard ACL", "Extended ACL", "Reflexive ACL", "Named ACL"],
     correct_answer: "Standard ACL",
-    explanation: "Standard ACLs (1-99, 1300-1999) match only source IP. Extended ACLs (100-199, 2000-2699) match source, destination, protocol, and ports.",
+explanation: "Standard ACLs (1-99, 1300-1999) match only source IP. Extended ACLs (100-199, 2000-2699) match source, destination, protocol, and ports.",
   },
   {
     id: "ccna-sec-007",
@@ -1688,7 +1688,7 @@ const ccnaQuestions: Question[] = [
       "On the default gateway",
     ],
     correct_answer: "As close to the destination as possible",
-    explanation: "Standard ACLs only match source IP, so placing them far from the source prevents unintentionally blocking legitimate traffic to other destinations.",
+explanation: "Standard ACLs only match source IP, so placing them far from the source prevents unintentionally blocking legitimate traffic to other destinations.",
   },
   {
     id: "ccna-sec-008",
@@ -1703,7 +1703,7 @@ const ccnaQuestions: Question[] = [
       "At the ISP boundary",
     ],
     correct_answer: "As close to the source as possible",
-    explanation: "Extended ACLs match source, destination, and ports, so placing them near the source drops unwanted traffic early and saves bandwidth.",
+explanation: "Extended ACLs match source, destination, and ports, so placing them near the source drops unwanted traffic early and saves bandwidth.",
   },
   {
     id: "ccna-sec-009",
@@ -1713,7 +1713,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the implicit rule at the end of every Cisco ACL?",
     options: ["Permit any", "Deny any", "Log all", "Redirect"],
     correct_answer: "Deny any",
-    explanation: "Every ACL has an implicit 'deny ip any any' at the end. If no entry matches, the packet is dropped.",
+explanation: "Every ACL (Access Control List) has an implicit 'deny ip any any' at the end. If no entry matches, the packet is dropped.",
   },
   {
     id: "ccna-sec-010",
@@ -1723,7 +1723,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which wildcard mask matches exactly one host?",
     options: ["0.0.0.0", "255.255.255.255", "0.0.0.255", "255.255.255.0"],
     correct_answer: "0.0.0.0",
-    explanation: "A wildcard mask of 0.0.0.0 requires every bit to match exactly — matching a single host.",
+explanation: "A wildcard mask of 0.0.0.0 requires every bit to match exactly — matching a single host.",
   },
   {
     id: "ccna-sec-011",
@@ -1733,7 +1733,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which wildcard mask matches any host?",
     options: ["0.0.0.0", "0.0.0.255", "255.255.255.255", "255.0.0.0"],
     correct_answer: "255.255.255.255",
-    explanation: "A wildcard of 255.255.255.255 means 'don't care' about any bit, matching any IP. Cisco also accepts the 'any' keyword.",
+explanation: "A wildcard of 255.255.255.255 means 'don't care' about any bit, matching any IP. Cisco also accepts the 'any' keyword.",
   },
   {
     id: "ccna-sec-012",
@@ -1748,7 +1748,7 @@ const ccnaQuestions: Question[] = [
       "There is no difference",
     ],
     correct_answer: "RADIUS encrypts only the password; TACACS+ encrypts the entire payload",
-    explanation: "TACACS+ (Cisco, TCP 49) encrypts the full packet body and separates AAA. RADIUS (UDP 1812/1813) encrypts only the password.",
+explanation: "TACACS+ (Cisco, TCP (Transmission Control Protocol) 49) encrypts the full packet body and separates AAA (Authentication, Authorization, and Accounting). RADIUS (Remote Authentication Dial-In User Service) (UDP (User Datagram Protocol) 1812/1813) encrypts only the password.",
   },
   {
     id: "ccna-sec-013",
@@ -1758,7 +1758,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which TCP port does TACACS+ use?",
     options: ["49", "88", "389", "1812"],
     correct_answer: "49",
-    explanation: "TACACS+ uses TCP port 49. RADIUS uses UDP 1812 (auth) and 1813 (accounting).",
+explanation: "TACACS+ uses TCP (Transmission Control Protocol) port 49. RADIUS (Remote Authentication Dial-In User Service) uses UDP (User Datagram Protocol) 1812 (auth) and 1813 (accounting).",
   },
   {
     id: "ccna-sec-014",
@@ -1773,7 +1773,7 @@ const ccnaQuestions: Question[] = [
       "Port scans",
     ],
     correct_answer: "Rogue DHCP servers",
-    explanation: "DHCP snooping lets the switch differentiate trusted (server) ports from untrusted (client) ports, blocking unauthorized DHCP responses.",
+explanation: "DHCP (Dynamic Host Configuration Protocol) snooping lets the switch differentiate trusted (server) ports from untrusted (client) ports, blocking unauthorized DHCP responses.",
   },
   {
     id: "ccna-sec-015",
@@ -1783,7 +1783,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which feature uses the DHCP snooping binding table to prevent ARP spoofing?",
     options: ["Port security", "Dynamic ARP Inspection (DAI)", "BPDU Guard", "Root Guard"],
     correct_answer: "Dynamic ARP Inspection (DAI)",
-    explanation: "DAI inspects ARP packets against the DHCP snooping binding table, dropping spoofed ARP replies.",
+explanation: "DAI (Dynamic ARP Inspection) inspects ARP (Address Resolution Protocol) packets against the DHCP (Dynamic Host Configuration Protocol) snooping binding table, dropping spoofed ARP replies.",
   },
   {
     id: "ccna-sec-016",
@@ -1798,7 +1798,7 @@ const ccnaQuestions: Question[] = [
       "Link aggregation",
     ],
     correct_answer: "Port-based network access control using authentication",
-    explanation: "802.1X authenticates users/devices before allowing traffic on a switch port. It uses EAP and typically a RADIUS server.",
+explanation: "802.1X authenticates users/devices before allowing traffic on a switch port. It uses EAP (Extensible Authentication Protocol) and typically a RADIUS (Remote Authentication Dial-In User Service) server.",
   },
   {
     id: "ccna-sec-017",
@@ -1813,7 +1813,7 @@ const ccnaQuestions: Question[] = [
       "The authorization manager",
     ],
     correct_answer: "The client device seeking access",
-    explanation: "Supplicant = client. Authenticator = switch/AP. Authentication server = RADIUS/TACACS+.",
+explanation: "Supplicant = client. Authenticator = switch/AP. Authentication server = RADIUS (Remote Authentication Dial-In User Service)/TACACS+.",
   },
   {
     id: "ccna-sec-018",
@@ -1823,7 +1823,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which attack overwhelms a switch's MAC address table?",
     options: ["ARP spoofing", "MAC flooding", "VLAN hopping", "DNS poisoning"],
     correct_answer: "MAC flooding",
-    explanation: "MAC flooding sends many frames with fake source MACs to fill the CAM table, causing the switch to flood traffic like a hub.",
+explanation: "MAC (Media Access Control) flooding sends many frames with fake source MACs to fill the CAM (Content Addressable Memory) table, causing the switch to flood traffic like a hub.",
   },
   {
     id: "ccna-sec-019",
@@ -1833,7 +1833,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which security control mitigates MAC flooding?",
     options: ["Port security", "DHCP snooping", "Root guard", "BPDU filter"],
     correct_answer: "Port security",
-    explanation: "Port security limits MAC addresses learned per port, defeating MAC flooding attacks.",
+explanation: "Port security limits MAC (Media Access Control) addresses learned per port, defeating MAC flooding attacks.",
   },
   {
     id: "ccna-sec-020",
@@ -1848,7 +1848,7 @@ const ccnaQuestions: Question[] = [
       "No special characters",
     ],
     correct_answer: "Minimum length, complexity, and regular rotation",
-    explanation: "Strong policies require sufficient length, mixed character types, and periodic change (though modern NIST guidance is moving away from forced rotation).",
+explanation: "Strong policies require sufficient length, mixed character types, and periodic change (though modern NIST guidance is moving away from forced rotation).",
   },
   {
     id: "ccna-sec-021",
@@ -1858,7 +1858,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which attack involves redirecting traffic by sending forged ARP replies?",
     options: ["ARP poisoning", "MAC flooding", "ICMP redirect attack", "DNS tunneling"],
     correct_answer: "ARP poisoning",
-    explanation: "ARP poisoning (ARP spoofing) injects false ARP entries so victims send traffic to the attacker instead of the real gateway.",
+explanation: "ARP (Address Resolution Protocol) poisoning (ARP spoofing) injects false ARP entries so victims send traffic to the attacker instead of the real gateway.",
   },
   {
     id: "ccna-sec-022",
@@ -1873,7 +1873,7 @@ const ccnaQuestions: Question[] = [
       "A honeypot",
     ],
     correct_answer: "A perimeter network that exposes external-facing services while isolating them from the internal network",
-    explanation: "Demilitarized Zone hosts public servers (web, mail) so that a compromise doesn't give attackers direct access to internal assets.",
+explanation: "Demilitarized Zone hosts public servers (web, mail) so that a compromise doesn't give attackers direct access to internal assets.",
   },
   {
     id: "ccna-sec-023",
@@ -1888,7 +1888,7 @@ const ccnaQuestions: Question[] = [
       "A username and password",
     ],
     correct_answer: "A password and a fingerprint",
-    explanation: "MFA requires two different factor types: something you know, something you have, something you are. Password + fingerprint combines two categories.",
+explanation: "MFA (Multi-Factor Authentication) requires two different factor types: something you know, something you have, something you are. Password + fingerprint combines two categories.",
   },
   {
     id: "ccna-sec-024",
@@ -1903,7 +1903,7 @@ const ccnaQuestions: Question[] = [
       "no telnet",
     ],
     correct_answer: "transport input ssh",
-    explanation: "Under 'line vty 0 4', 'transport input ssh' disables Telnet and allows only SSH access.",
+explanation: "Under 'line vty 0 4', 'transport input ssh' disables Telnet and allows only SSH (Secure Shell) access.",
   },
   {
     id: "ccna-sec-025",
@@ -1918,7 +1918,7 @@ const ccnaQuestions: Question[] = [
       "Assign IP addresses",
     ],
     correct_answer: "Provide encrypted tunnels over untrusted networks",
-    explanation: "VPNs provide confidentiality, integrity, and authentication when sending traffic across public networks like the internet.",
+explanation: "VPNs provide confidentiality, integrity, and authentication when sending traffic across public networks like the internet.",
   },
   {
     id: "ccna-sec-026",
@@ -1928,7 +1928,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which VPN type is typically used for remote workers?",
     options: ["Site-to-site IPSec", "Remote access (SSL or IPSec)", "MPLS", "Frame Relay"],
     correct_answer: "Remote access (SSL or IPSec)",
-    explanation: "Remote access VPNs (often SSL-based via a browser or client) connect individual users to the corporate network.",
+explanation: "Remote access VPNs (often SSL-based via a browser or client) connect individual users to the corporate network.",
   },
   {
     id: "ccna-sec-027",
@@ -1938,7 +1938,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which is NOT an IPSec component?",
     options: ["AH", "ESP", "IKE", "NAT"],
     correct_answer: "NAT",
-    explanation: "IPSec uses AH (authentication), ESP (encryption), and IKE (key exchange). NAT is a separate service.",
+explanation: "IPSec (Internet Protocol Security) uses AH (authentication), ESP (Encapsulating Security Payload) (encryption), and IKE (Internet Key Exchange) (key exchange). NAT (Network Address Translation) is a separate service.",
   },
   {
     id: "ccna-sec-028",
@@ -1948,7 +1948,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What kind of attack tries every possible password combination?",
     options: ["Phishing", "Brute force", "DDoS", "Man-in-the-middle"],
     correct_answer: "Brute force",
-    explanation: "Brute force systematically tries combinations. Dictionary attacks are a subset that use common words.",
+explanation: "Brute force systematically tries combinations. Dictionary attacks are a subset that use common words.",
   },
   {
     id: "ccna-sec-029",
@@ -1963,7 +1963,7 @@ const ccnaQuestions: Question[] = [
       "Buffer overflow",
     ],
     correct_answer: "Phishing email asking for credentials",
-    explanation: "Social engineering manipulates people rather than systems. Phishing, pretexting, and baiting are all examples.",
+explanation: "Social engineering manipulates people rather than systems. Phishing, pretexting, and baiting are all examples.",
   },
   {
     id: "ccna-sec-030",
@@ -1978,7 +1978,7 @@ const ccnaQuestions: Question[] = [
       "enable <name> secret <pwd>",
     ],
     correct_answer: "username <name> secret <pwd>",
-    explanation: "'username X secret Y' creates a local user with a hashed password. 'username X password Y' stores the password in clear text.",
+explanation: "'username X secret Y' creates a local user with a hashed password. 'username X password Y' stores the password in clear text.",
   },
   {
     id: "ccna-sec-031",
@@ -1993,7 +1993,7 @@ const ccnaQuestions: Question[] = [
       "aaa start",
     ],
     correct_answer: "aaa new-model",
-    explanation: "'aaa new-model' enables the AAA subsystem, required before configuring method lists and external authentication.",
+explanation: "'aaa new-model' enables the AAA (Authentication, Authorization, and Accounting) subsystem, required before configuring method lists and external authentication.",
   },
   {
     id: "ccna-sec-032",
@@ -2003,7 +2003,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the difference between an ACL and a firewall?",
     options: [],
     correct_answer: "ACLs are simple permit/deny rules on interfaces filtering by IP/port. Firewalls are stateful devices that track connections and often add IPS, application inspection, and deeper filtering.",
-    explanation: "ACLs are a basic first line of filtering. Firewalls maintain state tables and make more intelligent forwarding decisions.",
+explanation: "ACLs are a basic first line of filtering. Firewalls maintain state tables and make more intelligent forwarding decisions.",
   },
   {
     id: "ccna-sec-033",
@@ -2018,7 +2018,7 @@ const ccnaQuestions: Question[] = [
       "Compliance, Investigation, Audit",
     ],
     correct_answer: "Confidentiality, Integrity, Availability",
-    explanation: "The CIA triad is the foundation of information security: keep data secret, unaltered, and accessible when needed.",
+explanation: "The CIA (Confidentiality, Integrity, Availability) triad is the foundation of information security: keep data secret, unaltered, and accessible when needed.",
   },
 
   // ═══════════════════════════════════════════════════════════════════════
@@ -2032,7 +2032,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What data format do REST APIs most commonly return?",
     options: ["XML", "YAML", "JSON", "CSV"],
     correct_answer: "JSON",
-    explanation: "JSON is lightweight, human-readable, and the de facto standard for modern REST APIs. XML is older and less common now.",
+explanation: "JSON is lightweight, human-readable, and the de facto standard for modern REST APIs. XML is older and less common now.",
   },
   {
     id: "ccna-auto-002",
@@ -2042,7 +2042,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which HTTP method creates a new resource?",
     options: ["GET", "POST", "PUT", "DELETE"],
     correct_answer: "POST",
-    explanation: "POST creates new resources. PUT replaces/updates, PATCH partially updates, DELETE removes, GET reads.",
+explanation: "POST creates new resources. PUT replaces/updates, PATCH partially updates, DELETE removes, GET reads.",
   },
   {
     id: "ccna-auto-003",
@@ -2052,7 +2052,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which HTTP method retrieves a resource without modifying it?",
     options: ["GET", "POST", "PUT", "HEAD"],
     correct_answer: "GET",
-    explanation: "GET retrieves resources and should be idempotent (no side effects). HEAD is similar but returns only headers.",
+explanation: "GET retrieves resources and should be idempotent (no side effects). HEAD is similar but returns only headers.",
   },
   {
     id: "ccna-auto-004",
@@ -2062,7 +2062,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What does HTTP status code 201 mean?",
     options: ["OK", "Created", "Accepted", "No Content"],
     correct_answer: "Created",
-    explanation: "201 Created means a new resource was successfully created. 200 is generic OK, 202 is Accepted (queued), 204 is No Content.",
+explanation: "201 Created means a new resource was successfully created. 200 is generic OK, 202 is Accepted (queued), 204 is No Content.",
   },
   {
     id: "ccna-auto-005",
@@ -2072,7 +2072,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What does HTTP status code 401 indicate?",
     options: ["Not Found", "Unauthorized", "Forbidden", "Server Error"],
     correct_answer: "Unauthorized",
-    explanation: "401 means authentication is required or has failed. 403 Forbidden means you're authenticated but not allowed.",
+explanation: "401 means authentication is required or has failed. 403 Forbidden means you're authenticated but not allowed.",
   },
   {
     id: "ccna-auto-006",
@@ -2082,7 +2082,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What does HTTP 404 mean?",
     options: ["Server error", "Not found", "Forbidden", "Unauthorized"],
     correct_answer: "Not found",
-    explanation: "404 Not Found indicates the requested resource does not exist.",
+explanation: "404 Not Found indicates the requested resource does not exist.",
   },
   {
     id: "ccna-auto-007",
@@ -2092,7 +2092,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What does HTTP 500 mean?",
     options: ["OK", "Client error", "Internal server error", "Redirect"],
     correct_answer: "Internal server error",
-    explanation: "5xx codes indicate server-side errors. 500 is a generic internal error where the server could not fulfill the request.",
+explanation: "5xx codes indicate server-side errors. 500 is a generic internal error where the server could not fulfill the request.",
   },
   {
     id: "ccna-auto-008",
@@ -2107,7 +2107,7 @@ const ccnaQuestions: Question[] = [
       "Switched Data Node",
     ],
     correct_answer: "Software Defined Networking",
-    explanation: "SDN separates the control plane from the data plane and centralizes control in a software controller.",
+explanation: "SDN (Software-Defined Networking) separates the control plane from the data plane and centralizes control in a software controller.",
   },
   {
     id: "ccna-auto-009",
@@ -2117,7 +2117,7 @@ const ccnaQuestions: Question[] = [
     prompt: "In traditional networking, which plane makes forwarding decisions based on routing tables?",
     options: ["Management plane", "Control plane", "Data plane", "Security plane"],
     correct_answer: "Control plane",
-    explanation: "The control plane builds routing tables and makes decisions. The data (forwarding) plane moves actual packets based on those decisions.",
+explanation: "The control plane builds routing tables and makes decisions. The data (forwarding) plane moves actual packets based on those decisions.",
   },
   {
     id: "ccna-auto-010",
@@ -2127,7 +2127,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which plane physically forwards packets through a device?",
     options: ["Management", "Control", "Data", "Application"],
     correct_answer: "Data",
-    explanation: "The data plane (a.k.a. forwarding plane) handles per-packet operations. The control plane populates its forwarding tables.",
+explanation: "The data plane (a.k.a. forwarding plane) handles per-packet operations. The control plane populates its forwarding tables.",
   },
   {
     id: "ccna-auto-011",
@@ -2137,7 +2137,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which is a common configuration management tool used for network automation?",
     options: ["Ansible", "Chef", "Puppet", "All of the above"],
     correct_answer: "All of the above",
-    explanation: "All three are used for automation. Ansible is agentless and YAML-based, while Chef and Puppet use agents and their own DSLs.",
+explanation: "All three are used for automation. Ansible is agentless and YAML-based, while Chef and Puppet use agents and their own DSLs.",
   },
   {
     id: "ccna-auto-012",
@@ -2147,7 +2147,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which of these is agentless?",
     options: ["Puppet", "Chef", "Ansible", "SaltStack with minions"],
     correct_answer: "Ansible",
-    explanation: "Ansible uses SSH (or WinRM) to push changes and does not require an agent on the managed node.",
+explanation: "Ansible uses SSH (Secure Shell) (or WinRM) to push changes and does not require an agent on the managed node.",
   },
   {
     id: "ccna-auto-013",
@@ -2157,7 +2157,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What format are Ansible playbooks written in?",
     options: ["JSON", "XML", "YAML", "Python"],
     correct_answer: "YAML",
-    explanation: "Ansible playbooks are YAML files. They can use Jinja2 templating for variables.",
+explanation: "Ansible playbooks are YAML files. They can use Jinja2 templating for variables.",
   },
   {
     id: "ccna-auto-014",
@@ -2172,7 +2172,7 @@ const ccnaQuestions: Question[] = [
       "Compiling code",
     ],
     correct_answer: "Structuring human-readable configuration data",
-    explanation: "YAML (YAML Ain't Markup Language) is designed for human readability and is common in DevOps tools and Kubernetes manifests.",
+explanation: "YAML (YAML Ain't Markup Language) is designed for human readability and is common in DevOps tools and Kubernetes manifests.",
   },
   {
     id: "ccna-auto-015",
@@ -2182,7 +2182,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which of these is NOT a REST principle?",
     options: ["Stateless", "Client-server", "Cacheable", "Session persistent"],
     correct_answer: "Session persistent",
-    explanation: "REST is stateless — every request must contain all information needed to process it. Session state is explicitly NOT part of REST.",
+explanation: "REST is stateless — every request must contain all information needed to process it. Session state is explicitly NOT part of REST.",
   },
   {
     id: "ccna-auto-016",
@@ -2197,7 +2197,7 @@ const ccnaQuestions: Question[] = [
       "Ends with a semicolon",
     ],
     correct_answer: "Uses key-value pairs enclosed in curly braces",
-    explanation: "JSON objects use { \"key\": \"value\" } syntax. Arrays use square brackets. Strings are double-quoted.",
+explanation: "JSON objects use { \"key\": \"value\" } syntax. Arrays use square brackets. Strings are double-quoted.",
   },
   {
     id: "ccna-auto-017",
@@ -2207,7 +2207,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which data type is NOT directly supported by JSON?",
     options: ["String", "Number", "Boolean", "Date"],
     correct_answer: "Date",
-    explanation: "JSON supports strings, numbers, booleans, null, objects, and arrays. Dates must be represented as strings (typically ISO 8601).",
+explanation: "JSON supports strings, numbers, booleans, null, objects, and arrays. Dates must be represented as strings (typically ISO 8601).",
   },
   {
     id: "ccna-auto-018",
@@ -2217,7 +2217,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is Puppet's language called?",
     options: ["YAML", "Puppet DSL", "Python", "Ruby"],
     correct_answer: "Puppet DSL",
-    explanation: "Puppet uses its own declarative domain-specific language (DSL) written in Ruby syntax.",
+explanation: "Puppet uses its own declarative domain-specific language (DSL) written in Ruby syntax.",
   },
   {
     id: "ccna-auto-019",
@@ -2227,7 +2227,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which protocol does NETCONF use for transport?",
     options: ["HTTP", "SSH", "FTP", "SNMP"],
     correct_answer: "SSH",
-    explanation: "NETCONF runs over SSH (TCP 830 by default). It uses XML to encode configuration data.",
+explanation: "NETCONF (Network Configuration Protocol) runs over SSH (Secure Shell) (TCP (Transmission Control Protocol) 830 by default). It uses XML to encode configuration data.",
   },
   {
     id: "ccna-auto-020",
@@ -2237,7 +2237,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which data modeling language is used with NETCONF and RESTCONF?",
     options: ["JSON Schema", "YANG", "XML Schema", "Protobuf"],
     correct_answer: "YANG",
-    explanation: "YANG defines the structure of configuration and operational data used by NETCONF, RESTCONF, and gRPC-based telemetry.",
+explanation: "YANG (Yet Another Next Generation) defines the structure of configuration and operational data used by NETCONF (Network Configuration Protocol), RESTCONF (REST Configuration Protocol), and gRPC-based telemetry.",
   },
   {
     id: "ccna-auto-021",
@@ -2252,7 +2252,7 @@ const ccnaQuestions: Question[] = [
       "Static routing",
     ],
     correct_answer: "Intent-based networking automation and assurance",
-    explanation: "Cisco DNA Center is the controller for intent-based networking, automating campus network provisioning and monitoring.",
+explanation: "Cisco DNA (Digital Network Architecture) Center is the controller for intent-based networking, automating campus network provisioning and monitoring.",
   },
   {
     id: "ccna-auto-022",
@@ -2267,7 +2267,7 @@ const ccnaQuestions: Question[] = [
       "Isolated Branch Node",
     ],
     correct_answer: "Intent-Based Networking",
-    explanation: "IBN focuses on capturing business intent and automating the network to deliver that intent, with continuous assurance.",
+explanation: "IBN (Intent-Based Networking) focuses on capturing business intent and automating the network to deliver that intent, with continuous assurance.",
   },
   {
     id: "ccna-auto-023",
@@ -2282,7 +2282,7 @@ const ccnaQuestions: Question[] = [
       "Manual configuration of every device",
     ],
     correct_answer: "A central controller",
-    explanation: "SDN centralizes control in a controller that programs the data plane of network devices via southbound APIs.",
+explanation: "SDN (Software-Defined Networking) centralizes control in a controller that programs the data plane of network devices via southbound APIs.",
   },
   {
     id: "ccna-auto-024",
@@ -2292,7 +2292,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which API type is used between an SDN controller and the applications above it?",
     options: ["Southbound API", "Northbound API", "Eastbound API", "Westbound API"],
     correct_answer: "Northbound API",
-    explanation: "Northbound APIs expose controller functions to applications. Southbound APIs (OpenFlow, NETCONF) program the devices below.",
+explanation: "Northbound APIs expose controller functions to applications. Southbound APIs (OpenFlow, NETCONF (Network Configuration Protocol)) program the devices below.",
   },
   {
     id: "ccna-auto-025",
@@ -2302,7 +2302,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which of these is a southbound protocol?",
     options: ["REST", "NETCONF", "GraphQL", "SOAP"],
     correct_answer: "NETCONF",
-    explanation: "NETCONF, OpenFlow, and gRPC are southbound protocols between a controller and network devices. REST is typically northbound.",
+explanation: "NETCONF (Network Configuration Protocol), OpenFlow, and gRPC are southbound protocols between a controller and network devices. REST is typically northbound.",
   },
   {
     id: "ccna-auto-026",
@@ -2317,7 +2317,7 @@ const ccnaQuestions: Question[] = [
       "A MAC address",
     ],
     correct_answer: "A specific URI that represents a resource or collection",
-    explanation: "Endpoints like /api/v1/devices or /users/42 identify specific resources the API exposes.",
+explanation: "Endpoints like /api/v1/devices or /users/42 identify specific resources the API exposes.",
   },
   {
     id: "ccna-auto-027",
@@ -2332,7 +2332,7 @@ const ccnaQuestions: Question[] = [
       "Must be cached",
     ],
     correct_answer: "Produces the same result no matter how many times it is called",
-    explanation: "Idempotent methods (GET, PUT, DELETE) can safely be retried. POST is typically NOT idempotent because it creates resources.",
+explanation: "Idempotent methods (GET, PUT, DELETE) can safely be retried. POST is typically NOT idempotent because it creates resources.",
   },
   {
     id: "ccna-auto-028",
@@ -2347,7 +2347,7 @@ const ccnaQuestions: Question[] = [
       "Kerberos",
     ],
     correct_answer: "Bearer token (OAuth)",
-    explanation: "Bearer tokens (often OAuth 2.0 access tokens) are sent as 'Authorization: Bearer <token>'. Basic Auth uses base64-encoded credentials.",
+explanation: "Bearer tokens (often OAuth 2.0 access tokens) are sent as 'Authorization: Bearer <token>'. Basic Auth uses base64-encoded credentials.",
   },
   {
     id: "ccna-auto-029",
@@ -2362,7 +2362,7 @@ const ccnaQuestions: Question[] = [
       "Central Inventory / Central Database",
     ],
     correct_answer: "Continuous Integration / Continuous Deployment",
-    explanation: "CI/CD automates building, testing, and deploying code changes. Network CI/CD applies the same principles to configuration changes.",
+explanation: "CI/CD automates building, testing, and deploying code changes. Network CI/CD applies the same principles to configuration changes.",
   },
   {
     id: "ccna-auto-030",
@@ -2372,7 +2372,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which port does RESTCONF typically use?",
     options: ["22", "80", "443", "830"],
     correct_answer: "443",
-    explanation: "RESTCONF runs over HTTPS (TCP 443). NETCONF uses SSH on TCP 830.",
+explanation: "RESTCONF (REST Configuration Protocol) runs over HTTPS (Hypertext Transfer Protocol Secure) (TCP (Transmission Control Protocol) 443). NETCONF (Network Configuration Protocol) uses SSH (Secure Shell) on TCP 830.",
   },
   {
     id: "ccna-auto-031",
@@ -2382,7 +2382,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which automation tool is developed by Cisco and aimed at network engineers writing Python scripts?",
     options: ["pyATS/Genie", "Terraform", "Jenkins", "Vagrant"],
     correct_answer: "pyATS/Genie",
-    explanation: "Cisco's pyATS and Genie libraries help engineers script tests, parse device output, and automate network validation.",
+explanation: "Cisco's pyATS and Genie libraries help engineers script tests, parse device output, and automate network validation.",
   },
   {
     id: "ccna-auto-032",
@@ -2392,7 +2392,7 @@ const ccnaQuestions: Question[] = [
     prompt: "Which git command creates a new branch?",
     options: ["git new branch", "git branch <name>", "git create <name>", "git init <name>"],
     correct_answer: "git branch <name>",
-    explanation: "'git branch <name>' creates a branch. 'git checkout -b <name>' creates and switches to it.",
+explanation: "'git branch <name>' creates a branch. 'git checkout -b <name>' creates and switches to it.",
   },
   {
     id: "ccna-auto-033",
@@ -2407,7 +2407,7 @@ const ccnaQuestions: Question[] = [
       "Java Source Object Name",
     ],
     correct_answer: "JavaScript Object Notation",
-    explanation: "JSON originated from JavaScript but is now language-independent and used across virtually every modern web API.",
+explanation: "JSON originated from JavaScript but is now language-independent and used across virtually every modern web API.",
   },
   {
     id: "ccna-auto-034",
@@ -2417,7 +2417,7 @@ const ccnaQuestions: Question[] = [
     prompt: "What is the difference between traditional CLI management and programmable APIs like NETCONF/RESTCONF?",
     options: [],
     correct_answer: "CLI is designed for humans and is error-prone to parse. APIs like NETCONF/RESTCONF use structured data (XML/JSON) that's easily consumed by automation tools, supports transactions, and works with YANG models.",
-    explanation: "Programmable APIs enable reliable, scalable automation. CLI scraping is brittle and doesn't scale to modern infrastructure needs.",
+explanation: "Programmable APIs enable reliable, scalable automation. CLI scraping is brittle and doesn't scale to modern infrastructure needs.",
   },
 ];
 
