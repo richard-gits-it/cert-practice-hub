@@ -28,6 +28,16 @@ export default function Nav() {
             SUBNET
           </Link>
           <Link
+            href="/reference"
+            className={`transition-colors ${
+              pathname === "/reference"
+                ? "text-accent-cyan"
+                : "text-gray-600 hover:text-gray-400"
+            }`}
+          >
+            REF
+          </Link>
+          <Link
             href="/progress"
             className={`transition-colors ${
               pathname === "/progress"
