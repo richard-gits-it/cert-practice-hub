@@ -1,10 +1,8 @@
 import { Question } from "./types";
 import ccnaQuestions from "./questions/ccna";
-import itec285Questions from "./questions/itec285";
 
 const questionBanks: Record<string, Question[]> = {
   ccna: ccnaQuestions,
-  "itec285": itec285Questions,  
 };
 
 export function getQuestions(cert: string, domain?: string, type?: string): Question[] {
