@@ -60,7 +60,7 @@ const itec285Questions: Question[] = [
   },
   {
     id:"itec285-d1-008",cert:"itec285",domain:"Introduction to Security",type:"multiple_choice",
-    prompt:"Access control is a critical element of security.  Which of these definitions best represents "Access Control"?",
+    prompt:'Access control is a critical element of security.  Which of these definitions best represents "Access Control"?',
     options:["Controlling who can do what, and when, on your system.","The auditing of all potentially relevant material on your system.","Ensuring that data and computing resources are available in a timely manner.","Placing physical barriers (security doors) to prevent access to data centres."],
     correct_answer:"Controlling who can do what, and when, on your system.",
     explanation:"Access Control = Authorization -- controlling who can do what. Implements Least Privilege.",
@@ -475,7 +475,7 @@ const itec285Questions: Question[] = [
   {
     id:"itec285-d4-001",cert:"itec285",domain:"Cryptography Part I -- Classical Ciphers & Cryptanalysis",type:"multiple_choice",
     prompt:"Which of the following statements is true about DES?",
-    options:["DES was developed by the United States Army.","DES uses a key length of 128 bits.","DES was originally named "Killer", but the name was later changed.","All of the statements are true (except for 'none are true').","None of the statements are true."],
+    options:["DES was developed by the United States Army.","DES uses a key length of 128 bits.",'DES was originally named "Killer", but the name was later changed.',"All of the statements are true (except for 'none are true').","None of the statements are true."],
     correct_answer:"None of the statements are true.",
     explanation:"DES was developed by IBM (named Lucifer), uses 56-bit key. First computer encryption standard, now broken.",
   },
@@ -516,7 +516,7 @@ const itec285Questions: Question[] = [
   },
   {
     id:"itec285-d4-007",cert:"itec285",domain:"Cryptography Part I -- Classical Ciphers & Cryptanalysis",type:"multiple_choice",
-    prompt:"Who is generally credited with inventing the first "poly-alphabetic" Cipher?",
+    prompt:"Who is generally credited with inventing the first \"poly-alphabetic\" Cipher?",
     options:["Julius Caesar","Charles Babbage","Alan Turing","Blaise de Vigenere"],
     correct_answer:"Blaise de Vigenere",
     explanation:"Blaise de Vigenere invented the polyalphabetic Vigenere cipher.",
@@ -751,8 +751,8 @@ const itec285Questions: Question[] = [
   {
     id:"itec285-d6-002",cert:"itec285",domain:"Security Architecture -- Firewalls & Proxies",type:"multiple_choice",
     prompt:"Which of the following are important considerations to keep in mind when designing your network?  (Choose 4 options)",
-    options:["You should isolate your servers that are accessible from the Internet on their own, special network segment.","You should determine exactly what services users, both internal and external, need before starting.","You should implement an 'everything not explicitly allowed is denied" security policy.","If you divide your network into green, blue, and orange segments you will need at least one separate firewall per segment. You will need 3 firewalls if you want 3 network segments.","You should use firewalls to control traffic flow between networks.","You should isolate your servers that are accessible from the Internet on their own, special network segment.","You should always make sure that your wireless users are able to connect to important systems on your LAN, such as the Active Directory Domain Controller.","You should determine exactly what services users, both internal and external, need before starting."],
-    correct_answer:"You should isolate your servers that are accessible from the Internet on their own, special network segment. / You should determine exactly what services users, both internal and external, need before starting. / You should implement an 'everything not explicitly allowed is denied" security policy. / You should use firewalls to control traffic flow between networks. / You should isolate your servers that are accessible from the Internet on their own, special network segment. / You should determine exactly what services users, both internal and external, need before starting.",
+    options:["You should isolate your servers that are accessible from the Internet on their own, special network segment.","You should determine exactly what services users, both internal and external, need before starting.","You should implement an 'everything not explicitly allowed is denied' security policy.","If you divide your network into green, blue, and orange segments you will need at least one separate firewall per segment. You will need 3 firewalls if you want 3 network segments.","You should use firewalls to control traffic flow between networks.","You should isolate your servers that are accessible from the Internet on their own, special network segment.","You should always make sure that your wireless users are able to connect to important systems on your LAN, such as the Active Directory Domain Controller.","You should determine exactly what services users, both internal and external, need before starting."],
+    correct_answer:"You should isolate your servers that are accessible from the Internet on their own, special network segment. / You should determine exactly what services users, both internal and external, need before starting. / You should implement an 'everything not explicitly allowed is denied' security policy. / You should use firewalls to control traffic flow between networks. / You should isolate your servers that are accessible from the Internet on their own, special network segment. / You should determine exactly what services users, both internal and external, need before starting.",
     explanation:"Firewall design: default-deny, anti-spoofing, DMZ placement, color-coded zones.",
   },
   {
@@ -853,7 +853,7 @@ const itec285Questions: Question[] = [
   // ==================================================================
   {
     id:"itec285-d7-001",cert:"itec285",domain:"The Seven Rules of Security",type:"multiple_choice",
-    prompt:"Which one of these items is a component of the "Rule of proper response"?",
+    prompt:"Which one of these items is a component of the 'Rule of proper response'?",
     options:["Isolate services that are more prone to attack","Run important services as administrator, so logging will be clear","Upon discovering an attack, begin documenting everything you can","Changes should only be made when they are proven to be safe"],
     correct_answer:"Upon discovering an attack, begin documenting everything you can",
     explanation:"Rule 7 -- Proper Response: document everything with timestamps. IRP stages: Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned.",
@@ -1169,7 +1169,7 @@ const itec285Questions: Question[] = [
   // ==================================================================
   {
     id:"itec285-d10-001",cert:"itec285",domain:"Azure, TLS & Certificate Authorities",type:"multiple_choice",
-    prompt:"In the context of TLS, what is the meaning of "Perfect Forward Secrecy"",
+    prompt:"In the context of TLS, what is the meaning of 'Perfect Forward Secrecy'",
     options:["Generating new, temporary cryptographic keys each time communication is negotiated.","Not retaining logs of traffic, which might be compromised or coerced at a later date.","Using multiple nodes to route traffic so that no observing party can be certain where traffic originated from.","Utilizing very strong encryption, 2048-bit and above."],
     correct_answer:"Generating new, temporary cryptographic keys each time communication is negotiated.",
     explanation:"PFS: each TLS session uses a fresh temporary key. Past sessions cannot be decrypted later.",
@@ -1492,7 +1492,7 @@ const itec285Questions: Question[] = [
   },
   {
     id:"itec285-d13-004",cert:"itec285",domain:"Penetration Testing -- Recon & OSINT",type:"multiple_choice",
-    prompt:"What search engine has been described as "a public port scan directory or a search engine of banners"?",
+    prompt:"What search engine has been described as 'a public port scan directory or a search engine of banners'?",
     options:["NetworkHunter","Bing","Shodan.io"],
     correct_answer:"Shodan.io",
     explanation:"Shodan indexes all service banners and open ports. Passive -- never touches target.",
