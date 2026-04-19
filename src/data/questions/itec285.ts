@@ -18,7 +18,7 @@ const itec285Questions: Question[] = [
   },
   {
     id:"itec285-d1-002",cert:"itec285",domain:"Introduction to Security",type:"multiple_choice",
-    prompt:"Data Integrity is one of the key elements of security.  Which of these definitions accurately represents "Data Integrity"?",
+    prompt:"Data Integrity is one of the key elements of security. Which of these definitions accurately represents \"Data Integrity\"?",
     options:["The capture of all potentially relevant user actions on a system and examining the data for specified patterns.","Making sure that data or computing resources are available to authorized users when they need it.","Ensuring that data has not been read or copied by parties who do not have permission to do so.","Ensuring that data has not been maliciously deleted or tampered with in any way."],
     correct_answer:"Ensuring that data has not been maliciously deleted or tampered with in any way.",
     explanation:"CIA Triad: Integrity = data not tampered with. Confidentiality = not read without permission. Availability = accessible when needed.",
