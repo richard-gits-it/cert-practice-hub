@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
-
 :root {
   --bg-primary: #08080d;
   --accent-cyan: #00d4ff;
@@ -15,7 +13,6 @@
 body {
   background: var(--bg-primary);
   color: #e0e0e0;
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 ::-webkit-scrollbar { width: 6px; }
