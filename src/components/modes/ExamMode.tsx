@@ -6,6 +6,7 @@ import { getMultipleChoiceQuestions } from "@/data/questions";
 import { Question } from "@/data/types";
 import { getCertProgress, saveCertProgress } from "@/lib/progress";
 import { BackLink } from "@/components/ui/shared";
+import { CliBlock } from "@/components/ui/CliBlock";
 
 export default function ExamMode({
   cert,
@@ -57,7 +58,7 @@ export default function ExamMode({
   const formatTime = (s: number) =>
     `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
 
-  // ── Intro ─────────────────────────────────────────────────────────────
+  // ── Intro ──────────────────────────────────────────────────────────
   if (phase === "intro") {
     return (
       <div>
@@ -84,7 +85,7 @@ export default function ExamMode({
     );
   }
 
-  // ── Results ───────────────────────────────────────────────────────────
+  // ── Results ────────────────────────────────────────────────────────
   if (phase === "results") {
     const score = questions.filter((q) => answers[q.id] === q.correct_answer).length;
     const pct = questions.length > 0 ? Math.round((score / questions.length) * 100) : 0;
@@ -176,6 +177,7 @@ export default function ExamMode({
                   border: "1px solid rgba(255,62,142,0.1)",
                 }}
               >
+                {q.cli && <CliBlock text={q.cli} />}
                 <div className="text-[13px] text-gray-300 mb-1.5">{q.prompt}</div>
                 <div className="text-xs text-accent-pink font-mono">
                   Your answer: {answers[q.id] || "—"}
@@ -194,7 +196,7 @@ export default function ExamMode({
     );
   }
 
-  // ── Active Exam ───────────────────────────────────────────────────────
+  // ── Active Exam ────────────────────────────────────────────────────
   const q = questions[current];
 
   return (
@@ -238,6 +240,10 @@ export default function ExamMode({
         }}
       >
         <div className="text-[10px] tracking-[2px] text-gray-700 uppercase mb-3">{q.domain}</div>
+
+        {/* CLI block — shown above the prompt when present */}
+        {q.cli && <CliBlock text={q.cli} />}
+
         <div
           className="text-gray-200 leading-relaxed mb-6"
           style={{ fontSize: "clamp(15px, 3vw, 18px)" }}
